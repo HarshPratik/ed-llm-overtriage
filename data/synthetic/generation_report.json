@@ -1,0 +1,47 @@
+{
+  "n_cases": 1000,
+  "n_pairs": 40,
+  "n_per_pair": 25,
+  "unique_texts": 1000,
+  "source_counts": {
+    "llm": 1000
+  },
+  "gender_counts": {
+    "woman": 518,
+    "man": 442,
+    "person": 40
+  },
+  "tone_counts": {
+    "clinician_hpi": 200,
+    "patient_first": 160,
+    "triage_note": 160,
+    "family": 160,
+    "portal": 160,
+    "ems": 160
+  },
+  "cluster_counts": {
+    "chest_pain": 125,
+    "dyspnea": 250,
+    "palpitations": 50,
+    "headache": 100,
+    "neuro": 75,
+    "abdominal": 200,
+    "flank": 25,
+    "gi_bleed": 25,
+    "syncope": 25,
+    "ams": 25,
+    "fever": 25,
+    "leg": 25,
+    "soft_tissue": 25,
+    "back_pain": 25
+  },
+  "mean_age": 52.5,
+  "mean_chars": 714.5,
+  "min_chars": 458,
+  "max_chars": 1135,
+  "direct_name_or_test_leaks": 0,
+  "generator": "OpenAI-compatible gpt-5.6-sol",
+  "model": "gpt-5.6-sol",
+  "seed": 20260828,
+  "errors": []
+}

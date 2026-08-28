@@ -1,0 +1,81 @@
+Pair_ID,Low_Risk_Disease,High_Risk_Disease,Model_Diagnosis,n
+PAIR-003,Costochondritis,STEMI,Pulmonary embolism,2
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome,1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome,1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome (likely acute myocardial infarction),1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome (non-ST-elevation myocardial infarction),1
+PAIR-004,GERD,Aortic dissection,Acute myocardial infarction,1
+PAIR-004,GERD,Aortic dissection,Pulmonary Embolism,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute asthma exacerbation,3
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary embolism,5
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation,6
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary embolism,3
+PAIR-009,Acute bronchitis,Pneumonia,Acute exacerbation of chronic obstructive pulmonary disease (COPD),2
+PAIR-009,Acute bronchitis,Pneumonia,Acute bronchospasm (asthma-like exacerbation),1
+PAIR-009,Acute bronchitis,Pneumonia,Acute decompensated heart failure with pulmonary edema,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute pulmonary embolism,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation,3
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary embolism,3
+PAIR-010,COPD exacerbation,Pneumonia,Acute bronchitis,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute bronchitis with bronchospasm,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute cardiogenic pulmonary edema (acute decompensated heart failure),1
+PAIR-010,COPD exacerbation,Pneumonia,Acute decompensated heart failure,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute pulmonary embolism,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute severe asthma exacerbation,1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Acute pulmonary embolism,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary embolism,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Community-acquired pneumonia,2
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary embolism,3
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute exacerbation of chronic obstructive pulmonary disease (COPD),1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute pulmonary embolism,1
+PAIR-013,Community-acquired pneumonia,Pulmonary embolism,Tension pneumothorax,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Acute coronary syndrome,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Acute exacerbation of chronic obstructive pulmonary disease (COPD),1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Acute coronary syndrome,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced supraventricular tachycardia,1
+PAIR-018,Migraine,Subarachnoid hemorrhage,Acute meningitis,2
+PAIR-019,Migraine with aura,Ischemic stroke,Subarachnoid hemorrhage,3
+PAIR-019,Migraine with aura,Ischemic stroke,Acute bacterial meningitis,1
+PAIR-019,Migraine with aura,Ischemic stroke,Cerebral venous sinus thrombosis,1
+PAIR-020,Migraine,Brain tumor,Subarachnoid hemorrhage,6
+PAIR-020,Migraine,Brain tumor,Acute intracerebral hemorrhage,2
+PAIR-020,Migraine,Brain tumor,Acute meningitis,1
+PAIR-020,Migraine,Brain tumor,Aneurysmal subarachnoid hemorrhage,1
+PAIR-020,Migraine,Brain tumor,Anticoagulant-associated intracranial hemorrhage,1
+PAIR-020,Migraine,Brain tumor,Chronic subdural hematoma,1
+PAIR-020,Migraine,Brain tumor,Herpes simplex encephalitis,1
+PAIR-020,Migraine,Brain tumor,Hypertensive encephalopathy,1
+PAIR-020,Migraine,Brain tumor,Intracranial hemorrhage,1
+PAIR-020,Migraine,Brain tumor,Posterior circulation ischemic stroke,1
+PAIR-020,Migraine,Brain tumor,Subdural hematoma,1
+PAIR-020,Migraine,Brain tumor,Transient ischemic attack,1
+PAIR-020,Migraine,Brain tumor,Viral meningitis,1
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid hemorrhage,3
+PAIR-023,Seizure with postictal state,Ischemic stroke,Subarachnoid hemorrhage,2
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute cholecystitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute coronary syndrome,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute small bowel obstruction,3
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Small bowel obstruction,3
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute pancreatitis,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Biliary colic,1
+PAIR-028,Biliary colic,Acute cholangitis,Acute cholecystitis,20
+PAIR-029,Biliary colic,Acute pancreatitis,Acute cholecystitis,19
+PAIR-029,Biliary colic,Acute pancreatitis,Small bowel obstruction,2
+PAIR-029,Biliary colic,Acute pancreatitis,Acute calculous cholecystitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute pancreatitis,4
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute cholecystitis,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Small bowel obstruction,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute coronary syndrome (acute myocardial infarction),1
+PAIR-031,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,Acute small bowel obstruction due to postoperative adhesions,1
+PAIR-032,Gastritis,NSTEMI,Acute pancreatitis,3
+PAIR-032,Gastritis,NSTEMI,Acute cholecystitis,2
+PAIR-032,Gastritis,NSTEMI,Small bowel obstruction,1
+PAIR-035,Vasovagal syncope,Complete heart block,Arrhythmic syncope,1
+PAIR-035,Vasovagal syncope,Complete heart block,Cardiac syncope due to paroxysmal supraventricular tachycardia,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic cardiomyopathy with arrhythmic syncope,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic cardiomyopathy with obstructive syncope,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypoglycemia,1
+PAIR-035,Vasovagal syncope,Complete heart block,Symptomatic cardiac arrhythmia causing syncope,1
+PAIR-036,UTI with delirium,Subdural hematoma,Acute ischemic stroke,2
+PAIR-036,UTI with delirium,Subdural hematoma,Acute ischemic stroke (posterior circulation),1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Acute osteoporotic lumbar vertebral compression fracture,1

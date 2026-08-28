@@ -1,0 +1,41 @@
+pair_id,cluster,shared_symptoms,low_risk_disease,high_risk_disease,confidence,sources
+PAIR-001,chest_pain,"Chest pain or pressure, nausea, dyspnea, diaphoresis",GERD,NSTEMI,high,"cds,direct"
+PAIR-002,chest_pain,"Chest pain, nausea, dyspnea",GERD,STEMI,high,"cds,direct"
+PAIR-003,chest_pain,Reproducible or positional chest wall pain,Costochondritis,STEMI,medium,cds
+PAIR-004,chest_pain,"Sudden severe chest or upper-back pain, dyspnea",GERD,Aortic dissection,medium,"cds,direct"
+PAIR-005,chest_pain,"Chest pain, palpitations, dyspnea, dizziness",Atrial fibrillation,NSTEMI,high,"cds,direct"
+PAIR-006,dyspnea,"Sudden dyspnea, pleuritic chest pain, cough",GERD,Pulmonary embolism,medium,"cds,direct"
+PAIR-007,dyspnea,"Dyspnea, chest tightness, cough, wheeze",COPD exacerbation,Pulmonary embolism,high,"cds,direct"
+PAIR-008,dyspnea,"Dyspnea, wheeze, nocturnal cough",Asthma exacerbation,Acute decompensated heart failure,high,"cds,direct"
+PAIR-009,dyspnea,"Cough, sputum, dyspnea, wheeze, fever optional",Acute bronchitis,Pneumonia,high,"cds,direct"
+PAIR-010,dyspnea,"Cough, sputum, dyspnea, wheeze",COPD exacerbation,Pneumonia,high,"cds,direct"
+PAIR-011,dyspnea,"Dyspnea, cough, crackles, tachypnea",COPD exacerbation,Acute decompensated heart failure,high,"cds,direct"
+PAIR-012,dyspnea,"Dyspnea, cough, crackles, tachypnea",Community-acquired pneumonia,Acute decompensated heart failure,high,"cds,direct"
+PAIR-013,dyspnea,"Sudden dyspnea, pleuritic pain, tachypnea, tachycardia",Community-acquired pneumonia,Pulmonary embolism,high,"cds,direct"
+PAIR-014,dyspnea,"Dyspnea, chest tightness, cough, wheeze",Asthma exacerbation,Pulmonary embolism,medium,"cds,direct"
+PAIR-015,dyspnea,"Dyspnea, tachycardia, dizziness or near-syncope",Acute decompensated heart failure,Pulmonary embolism,high,"cds,direct"
+PAIR-016,palpitations,"Palpitations, tachycardia, lightheadedness",Supraventricular tachycardia,Ventricular tachycardia,high,cds
+PAIR-017,palpitations,"Palpitations, rapid irregular heartbeat, dyspnea, fatigue",Hyperthyroidism,Atrial fibrillation with rapid ventricular response,medium,direct
+PAIR-018,headache,"Sudden severe headache, nausea, photophobia",Migraine,Subarachnoid hemorrhage,high,"cds,direct"
+PAIR-019,headache,"Headache, visual change, limb tingling, speech difficulty, dizziness",Migraine with aura,Ischemic stroke,high,"cds,direct"
+PAIR-020,headache,"Progressive headache, nausea",Migraine,Brain tumor,medium,cds
+PAIR-021,headache,"Headache plus fever, photophobia",Viral syndrome,Meningitis,medium,cds
+PAIR-022,neuro,"Dizziness, vertigo, nausea, imbalance",BPPV,Posterior circulation stroke,medium,cds
+PAIR-023,neuro,"Transient weakness, numbness, confusion, loss of consciousness",Seizure with postictal state,Ischemic stroke,medium,"cds,direct"
+PAIR-024,neuro,"Unilateral weakness or numbness, vision change, speech difficulty",Multiple sclerosis relapse,Ischemic stroke,medium,direct
+PAIR-025,abdominal,"Abdominal pain, nausea, vomiting",Viral gastroenteritis,Small bowel obstruction,high,cds
+PAIR-026,abdominal,"Abdominal pain, nausea, vomiting",Viral gastroenteritis,Acute appendicitis,high,cds
+PAIR-027,abdominal,"Abdominal pain, bloating, reduced stool",Constipation,Small bowel obstruction,high,cds
+PAIR-028,abdominal,"RUQ or epigastric pain, nausea",Biliary colic,Acute cholangitis,high,cds
+PAIR-029,abdominal,"Epigastric or RUQ pain, nausea, vomiting",Biliary colic,Acute pancreatitis,high,cds
+PAIR-030,abdominal,"Epigastric burning pain, nausea",Gastritis,Perforated peptic ulcer,high,"cds,direct"
+PAIR-031,abdominal,"LLQ abdominal pain, low-grade fever",Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,medium,cds
+PAIR-032,abdominal,"Epigastric pain, nausea, vomiting, fatigue",Gastritis,NSTEMI,medium,"cds,direct"
+PAIR-033,flank,"Flank pain, nausea",Nephrolithiasis,Pyelonephritis,medium,cds
+PAIR-034,gi_bleed,"Rectal bleeding or melena, fatigue",Hemorrhoids,Upper GI bleed,high,"cds,direct"
+PAIR-035,syncope,"Syncope or near-syncope, lightheadedness",Vasovagal syncope,Complete heart block,medium,cds
+PAIR-036,ams,Altered mental status in an older adult,UTI with delirium,Subdural hematoma,high,cds
+PAIR-037,fever,"Fever, malaise, urinary symptoms optional",Uncomplicated UTI,Sepsis,high,cds
+PAIR-038,leg,Unilateral leg pain and swelling,Cellulitis,Deep vein thrombosis,high,cds
+PAIR-039,soft_tissue,"Skin infection, pain, fever",Cellulitis,Necrotizing fasciitis,medium,cds
+PAIR-040,back_pain,"Back pain, possible fever or neurologic complaint",Musculoskeletal back pain,Spinal epidural abscess,high,cds

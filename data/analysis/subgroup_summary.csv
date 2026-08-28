@@ -1,0 +1,13 @@
+split,level,n,pct_high_pole,pct_low_pole,pct_other,pct_self_high
+Gender,man,442,57.5,25.3,17.2,95.9
+Gender,person,40,57.5,25.0,17.5,90.0
+Gender,woman,518,56.6,26.8,16.6,90.9
+Tone,clinician_hpi,200,58.5,29.0,12.5,88.5
+Tone,ems,160,60.0,25.0,15.0,93.8
+Tone,family,160,55.0,25.6,19.4,96.9
+Tone,patient_first,160,56.2,24.4,19.4,95.0
+Tone,portal,160,60.0,23.8,16.2,91.2
+Tone,triage_note,160,51.9,28.1,20.0,94.4
+Age_Band,16-39,267,51.3,33.0,15.7,85.8
+Age_Band,40-64,438,58.7,23.5,17.8,94.1
+Age_Band,65+,295,59.7,23.7,16.6,98.3
