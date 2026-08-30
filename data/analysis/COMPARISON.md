@@ -1,6 +1,6 @@
 # Cross-model comparison (same 1000 cases, same JSON prompt)
 
-Forced JSON, one diagnosis, no tests. Generator: `gpt-5.6-sol`. Terra used the OpenAI-compatible pool. Grok 4.6, Gemini 3.7 Flash, and GLM 5.3 Flash ran through the Factory API (`FACTORY_API_KEY`, tools restricted to `LS`). Laguna S-2.1 and MiniMax M3 ran through a local OpenAI-compatible pool (`POOL_BASE_URL`); that proxy truncates at the first newline, so the identical system and user text was sent as one flattened user message. sarvam-105b ran through the Sarvam API (JSON mode). Terra artifacts were not overwritten. 33 of 1000 Sarvam rows used `sarvam-105b-conversations` because `sarvam-105b` never emitted JSON.
+Forced JSON, one diagnosis, no tests. Generator: `gpt-5.6-sol`. Models: gpt-5.6-terra, grok-4.6, gemini-3.7-flash, glm-5.3-flash, MiniMax M3, Laguna S-2.1, and sarvam-105b. Same 1000 cases. Terra artifacts were not overwritten. 33 of 1000 sarvam-105b rows used the conversations variant because the default run never emitted JSON.
 
 | Metric | gpt-5.6-terra | grok-4.6 | gemini-3.7-flash | glm-5.3-flash | MiniMax M3 | Laguna S-2.1 | sarvam-105b |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -22,12 +22,12 @@ Forced JSON, one diagnosis, no tests. Generator: `gpt-5.6-sol`. Terra used the O
 
 ## What differs
 
-- Terra (US / OpenAI) is still the most defensive on every endpoint.
-- MiniMax is the second-most defensive after Terra on self-High, among-mapped high-risk pole, and broad high.
-- Laguna has the largest Other bucket (26.6%). That pulls its *all-cases* high-risk-pole rate under 50% (46.8%). Among mapped cases it is still 63.8%.
-- GLM (China / Zhipu) remains the least willing to self-label High (79.9%) but is no longer the highest Other rate.
+- Terra is still the most defensive on every endpoint.
+- MiniMax M3 is the second-most defensive after Terra on self-High, among-mapped high-risk pole, and broad high.
+- Laguna S-2.1 has the largest Other bucket (26.6%). That pulls its *all-cases* high-risk-pole rate under 50% (46.8%). Among mapped cases it is still 63.8%.
+- GLM remains the least willing to self-label High (79.9%) but is no longer the highest Other rate.
 - Grok is close to 50% on the *all-cases* high-risk-pole rate (49.4%) because it maps more often to the low-risk pole (34.9% vs Terra 26.1%), but it still self-labels High 87.7% of the time.
-- Gemini (US / Google) is the least pair-skewed (55.8% among mapped) and, until GLM, the most willing to say Low (16.8%). GLM says Low more often (20.1%).
+- Gemini is the least pair-skewed (55.8% among mapped) and, until GLM, the most willing to say Low (16.8%). GLM says Low more often (20.1%).
 - sarvam-105b sits with Grok and Gemini on the pair map (59.4% among mapped) and self-labels High 83.9%. Other is 215 (21.5%); 161 of those are still counted as emergencies on the broad endpoint.
 
 The 50% mapped-pole figure remains a **reference point**, not a clinical gold standard. No human ED baseline yet.

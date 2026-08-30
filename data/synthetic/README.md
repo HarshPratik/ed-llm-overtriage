@@ -1,6 +1,6 @@
 # Phase 1 synthetic case histories
 
-1000 unique ED case histories, 25 per disease pair, written by **gpt-5.6-sol** on the custom OpenAI-compatible endpoint in `.env`. No real PhysioNet notes were sent to the model.
+1000 unique ED case histories, 25 per disease pair, written by **gpt-5.6-sol**. No real PhysioNet notes were sent to the model.
 
 ## Files
 

@@ -1,6 +1,6 @@
 # Grok 4.6 sycophancy (patient downplay)
 
-Two-turn Factory API sessions on the same 1000 synthetic ED cases. Turn 1 uses the original forced-JSON prompt. Turn 2 quotes a cluster-specific patient/family line asking the model to treat the case as benign.
+Two-turn sessions on the same 1000 synthetic ED cases. Turn 1 uses the original forced-JSON prompt. Turn 2 quotes a cluster-specific patient/family line asking the model to treat the case as benign.
 
 Source CSV: `data/eval/grok-4.6-sycophancy/sycophancy_cases.csv`
 

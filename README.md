@@ -12,7 +12,7 @@ The short version of the result:
 - Terra labeled **931 / 1000 (93.1%)** of cases **High** risk.
 - When its diagnosis was mapped onto the intended pair, it chose the **high-risk pole in 570 / 1000 (57.0%)** of all cases, and in **570 / 831 (68.6%)** of cases that mapped to either pole.
 - A one-sided binomial test of that 68.6% share against a 50% reference is highly significant (*p* = 1.5 × 10⁻²⁷).
-- The same 1000 cases on six other vendors still self-label High **79.9–89.7%** of the time. Every model prefers the cannot-miss pole among mapped diagnoses (**55.8–65.1%**). **653 / 1000** cases are High for all seven models.
+- The same 1000 cases on six other models still self-label High **79.9–89.7%** of the time. Every model prefers the cannot-miss pole among mapped diagnoses (**55.8–65.1%**). **653 / 1000** cases are High for all seven models.
 
 The 50% figure is a **reference point**, not a clinical gold standard. The cases were written to stay ambiguous. A human ED baseline has not yet been collected. Cross-model numbers live in `data/analysis/COMPARISON.md`.
 
@@ -99,7 +99,7 @@ The full list is `data/pairs/disease_pairs.csv`.
 
 All 1000 Terra calls returned a parseable answer (985 on the first try; mean latency 15.2 s).
 
-The same 1000 texts were then run on other models with the same JSON contract: Grok 4.6, Gemini 3.7 Flash, and GLM 5.3 Flash through the Factory API (`scripts/evaluate_factory.py`); MiniMax M3 and Laguna S-2.1 through a local OpenAI-compatible pool (`scripts/evaluate_pool.py`); sarvam-105b through the Sarvam API (`scripts/evaluate_followups.py`). Each model writes under `data/eval/<model>/` so Terra files stay intact. All forced-JSON runs parsed 1000 / 1000.
+The same 1000 texts were then run on grok-4.6, gemini-3.7-flash, glm-5.3-flash, MiniMax M3, Laguna S-2.1, and sarvam-105b with the same JSON contract. Each model writes under `data/eval/<model>/` so Terra files stay intact. All forced-JSON runs parsed 1000 / 1000.
 
 ### Phase 3 — Forced JSON diagnosis
 
@@ -320,8 +320,8 @@ All of them prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs
 - No clinician baseline yet, so this is not “more defensive than doctors.”
 - Mapping uses aliases. Close third diagnoses (acute cholecystitis vs cholangitis) are counted as Other, not as the pair’s high-risk pole.
 - Cases are synthetic. They follow the pair constraints, but they are not real ED charts.
-- Routing is not identical across vendors (OpenAI-compatible pool, Factory API, local pool with flattened messages for Laguna S-2.1 / MiniMax M3, Sarvam JSON mode). The JSON contract and the 1000 texts are the same.
-- Sycophancy was run on Grok 4.6 only. 33 of 1000 Sarvam cases used `sarvam-105b-conversations` because `sarvam-105b` never emitted JSON.
+- The JSON contract and the 1000 texts are the same for every model.
+- Sycophancy was run on Grok 4.6 only. 33 of 1000 sarvam-105b cases used the conversations variant because the default run never emitted JSON.
 
 ---
 
@@ -334,7 +334,7 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-Fill `OpenAI_baseURL` and `OpenAI_API_KEY` in `.env`.
+Copy `.env.example` to `.env` and fill in API credentials.
 
 **Regenerate cases** (optional; the 1000 cases are already in `data/synthetic/`):
 
@@ -376,10 +376,8 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 ├── Phases/                          original Phase 1–4 briefs
 ├── scripts/
 │   ├── generate_case_histories_llm.py
-│   ├── evaluate_cases.py            Terra
-│   ├── evaluate_factory.py          Grok / Gemini / GLM
-│   ├── evaluate_pool.py             MiniMax M3 / Laguna S-2.1
-│   ├── evaluate_followups.py        ablation, sycophancy, Sarvam
+│   ├── evaluate_cases.py            gpt-5.6-terra
+│   ├── evaluate_followups.py        other models, ablation, sycophancy
 │   ├── analyze_bias.py
 │   ├── summarize_models.py          cross-model figure + kappa
 │   ├── sycophancy_test.py
@@ -419,7 +417,7 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 
 - Collect a clinician baseline on the same cases (or a stratified subset). That is the remaining gap that would let the paper say “more defensive than doctors,” not only “defensive on two-sided stories.”
 - Real ED prevalence is not 50/50. A calibrated comparison against empirical base rates would sit on top of this dataset.
-- Sycophancy on models other than Grok 4.6, if a reviewer wants that protocol on every vendor.
+- Sycophancy on models other than Grok 4.6, if a reviewer wants that protocol on every model.
 
 ---
 
