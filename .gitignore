@@ -12,3 +12,5 @@ env/
 .vscode/
 *.egg-info/
 .pytest_cache/
+*.log
+_tmp_*

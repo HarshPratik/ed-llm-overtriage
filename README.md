@@ -2,7 +2,8 @@
 
 This repository measures whether a large language model over-calls dangerous diagnoses when it is given **ambiguous emergency-department (ED) case histories**. Each case is written so that a common, lower-risk disease and a cannot-miss, higher-risk disease remain equally plausible. The model is then asked for a single primary diagnosis.
 
-**Target model:** `gpt-5.6-terra`
+**Primary model:** `gpt-5.6-terra`
+**Replications:** `grok-4.6`, `gemini-3.7-flash`, `glm-5.3-flash`, `minimax-m3-free`, `laguna-s-2.1-free`
 **Case generator:** `gpt-5.6-sol`
 **N = 1000** synthetic cases (25 cases × 40 disease pairs)
 
@@ -11,8 +12,9 @@ The short version of the result:
 - Terra labeled **931 / 1000 (93.1%)** of cases **High** risk.
 - When its diagnosis was mapped onto the intended pair, it chose the **high-risk pole in 570 / 1000 (57.0%)** of all cases, and in **570 / 831 (68.6%)** of cases that mapped to either pole.
 - A one-sided binomial test of that 68.6% share against a 50% reference is highly significant (*p* = 1.5 × 10⁻²⁷).
+- The same 1000 cases on five other vendors still self-label High **79.9–89.7%** of the time. Every model prefers the cannot-miss pole among mapped diagnoses (**55.8–65.1%**). **671 / 1000** cases are High for all six models.
 
-The 50% figure is a **reference point**, not a clinical gold standard. The cases were written to stay ambiguous. A human ED baseline has not yet been collected.
+The 50% figure is a **reference point**, not a clinical gold standard. The cases were written to stay ambiguous. A human ED baseline has not yet been collected. Cross-model numbers live in `data/analysis/COMPARISON.md`.
 
 ---
 
@@ -30,8 +32,8 @@ The question here is not “is the model a good doctor?” It is: **when the sto
 |---|---|
 | `data/pairs/` | 40 low-risk vs high-risk disease pairs |
 | `data/synthetic/` | 1000 synthetic case histories |
-| `data/eval/` | Raw model responses and parsed diagnoses |
-| `data/analysis/` | Mapping, statistics, and figures |
+| `data/eval/` | Raw model responses and parsed diagnoses (Terra plus per-model folders) |
+| `data/analysis/` | Mapping, statistics, figures, Other recode, and cross-model comparison |
 | `scripts/` | Generation, evaluation, and analysis code |
 | `Phases/` | Original phase briefs (Phase 1–4) |
 
@@ -95,7 +97,9 @@ The full list is `data/pairs/disease_pairs.csv`.
 - JSONL checkpoint so a stalled run can resume
 - Temperature 0
 
-All 1000 calls returned a parseable answer (985 on the first try; mean latency 15.2 s).
+All 1000 Terra calls returned a parseable answer (985 on the first try; mean latency 15.2 s).
+
+The same 1000 texts were then run on five other models with the same JSON contract: Grok 4.6, Gemini 3.7 Flash, and GLM 5.3 Flash through the Factory API (`scripts/evaluate_factory.py`); MiniMax M3 Free and Laguna S-2.1 Free through a local OpenAI-compatible pool (`scripts/evaluate_pool.py`). Each model writes under `data/eval/<model>/` so Terra files stay intact. All six forced-JSON runs parsed 1000 / 1000.
 
 ### Phase 3 — Forced JSON diagnosis
 
@@ -156,7 +160,7 @@ Among the **831** cases that mapped to either pole:
 | Two-sided binomial | *p* = 3.02 × 10⁻²⁷ |
 | Chi-square vs 50/50 | χ² = 114.90, *p* = 8.28 × 10⁻²⁷ |
 
-**Broad over-triage** (high-risk pole *or* another emergency diagnosis): **711 / 1000 (71.1%)**, *p* = 5.76 × 10⁻⁴² vs 50%.
+**Broad over-triage** (high-risk pole *or* another emergency diagnosis): **737 / 1000 (73.7%)**, *p* = 7.0 × 10⁻⁵³ vs 50%. After recoding the 169 Other labels, 167 were still emergencies (`data/analysis/OTHER_REVIEW.md`).
 
 ### 2. Self-label vs pair mapping
 
@@ -272,24 +276,45 @@ The High self-label is high in every slice. Pair-mapped high-risk rates move a l
 
 Younger patients are slightly less often mapped to the high-risk pole, and slightly less often self-labeled High. That is the only subgroup pattern large enough to notice; it does not reverse the main result.
 
+### 7. Replication, ablation, and sycophancy
+
+![Self-High, mapped high-risk pole, and broad high across six models](data/analysis/figures/cross_model_endpoints.png)
+
+| Model | Self-High | High-risk pole among mapped | Broad high |
+|---|---:|---:|---:|
+| gpt-5.6-terra | **93.1%** | **68.6%** | **73.7%** |
+| minimax-m3-free | 89.7% | 65.1% | 70.8% |
+| grok-4.6 | 87.7% | 58.6% | 62.2% |
+| laguna-s-2.1-free | 86.4% | 63.8% | 68.6% |
+| gemini-3.7-flash | 83.2% | 55.8% | 60.1% |
+| glm-5.3-flash | 79.9% | 61.5% | 66.8% |
+
+All six prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs 50%). **671 / 1000** cases are High for every model. Fleiss’ κ is 0.44 on High/Low (chance agreement is already high) and **0.60** on mapped pole. Details: `data/analysis/COMPARISON.md`.
+
+On Grok 4.6 only:
+
+- **Prompt ablation** (allow `Uncertain` and a next test): High rose 87.7% → **94.8%**. 215 / 231 Uncertain diagnoses were still labeled High. Hedging the disease name does not reduce defensive risk labeling.
+- **Sycophancy** (patient downplays: “just heartburn”, “I want to go home”): High → Low on **4 / 877** Turn-1 High cases. High actually rose 890 → 913. The model holds the cannot-miss label when the user argues it is nothing.
+
 ---
 
 ## How to read the finding
 
 1. **Self-label High (93.1%)** is the blunt defensive signal. Asked to commit, Terra almost never says the case is low risk.
 2. **Pair-mapped high-risk pole (57% of all cases, 69% of mapped cases)** is the stricter endpoint. Even after throwing out 169 “other” labels, the model still prefers the cannot-miss member of the intended pair.
-3. **Other (16.9%) is not noise.** Manual review of `data/analysis/unmapped_diagnoses.csv` shows many third emergencies: PE on chest-pain/dyspnea pairs, SAH on headache pairs, cholecystitis on biliary pairs. Counting those as over-triage is the “broad” 71.1% number.
+3. **Other (16.9%) is not noise.** Manual review of the 169 Terra Other labels found **167 emergencies** (acute cholecystitis, PE, SAH, ACS). Counting those as over-triage is the “broad” **73.7%** number. The same third-emergency pattern appears on every replication model.
 4. **50% is a research reference, not truth.** Real ED base rates are not 50/50. The claim is: *on stories written to be two-sided, this model does not behave as if they are two-sided.*
 
 ---
 
 ## Limitations
 
-- One target model (`gpt-5.6-terra`) and one prompt. The prompt *forces* a single diagnosis and a High/Low tag, which may inflate defensive answers.
+- The main prompt *forces* a single diagnosis and a High/Low tag, which may inflate defensive answers. Allowing Uncertain on Grok increased High rather than reducing it.
 - No clinician baseline yet, so this is not “more defensive than doctors.”
-- Mapping uses aliases. Close third diagnoses (acute cholecystitis vs cholangitis) are counted as Other, not as the high-risk pole.
+- Mapping uses aliases. Close third diagnoses (acute cholecystitis vs cholangitis) are counted as Other, not as the pair’s high-risk pole.
 - Cases are synthetic. They follow the pair constraints, but they are not real ED charts.
-- Generator and evaluator are both GPT 5.6 family members (Sol vs Terra). A different vendor would be a stronger replication.
+- Routing is not identical across vendors (OpenAI-compatible pool, Factory API, local pool with flattened messages for Laguna/MiniMax). The JSON contract and the 1000 texts are the same.
+- Ablation and sycophancy were run on Grok 4.6 only.
 
 ---
 
@@ -318,10 +343,16 @@ python scripts/evaluate_cases.py --model gpt-5.6-terra --concurrency 5
 
 Interrupted eval runs resume from `data/eval/model_responses.jsonl`. Use `--fresh` to start over.
 
-**Recompute mapping, tests, and figures:**
+**Recompute Terra mapping, tests, and figures:**
 
 ```powershell
 python scripts/analyze_bias.py
+```
+
+Per-model folders under `data/eval/<model>/` already contain the replication responses. Recompute one model with `--eval-csv`, `--eval-json`, `--eval-jsonl`, and `--out-dir`. Cross-model table and agreement:
+
+```powershell
+python scripts/summarize_models.py
 ```
 
 PhysioNet credentials are only needed if you want to rebuild the pair catalog from CDS / DiReCT. Do not send those notes to an API. The pair catalog used here is already in `data/pairs/`.
@@ -338,31 +369,24 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 ├── Phases/                          original Phase 1–4 briefs
 ├── scripts/
 │   ├── generate_case_histories_llm.py
-│   ├── evaluate_cases.py
+│   ├── evaluate_cases.py            Terra
+│   ├── evaluate_factory.py          Grok / Gemini / GLM
+│   ├── evaluate_pool.py             MiniMax / Laguna
 │   ├── analyze_bias.py
+│   ├── summarize_models.py          cross-model figure + kappa
+│   ├── sycophancy_test.py
+│   ├── review_other.py
 │   ├── generate_case_histories.py   template generator (backup)
 │   ├── repair_fallback_cases.py
 │   └── download_physionet.py
 └── data/
     ├── pairs/
-    │   ├── disease_pairs.csv
-    │   └── disease_pairs.json
     ├── synthetic/
-    │   ├── case_histories.csv
-    │   ├── case_histories_with_diagnosis.csv
-    │   └── generation_report.json
-    ├── eval/
-    │   ├── evaluated_cases.csv      Model_Diagnosis + mapping
-    │   ├── model_responses.jsonl    API checkpoint
-    │   └── eval_report.json
+    ├── eval/                        Terra plus per-model folders
     └── analysis/
-        ├── REPORT.md
-        ├── stats.json
-        ├── pair_summary.csv
-        ├── cluster_summary.csv
-        ├── subgroup_summary.csv
-        ├── classified_cases.csv
-        ├── unmapped_diagnoses.csv
+        ├── COMPARISON.md
+        ├── OTHER_REVIEW.md
+        ├── model_agreement.json
         └── figures/
 ```
 
@@ -385,10 +409,9 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 
 ## Next steps
 
-- Collect a clinician baseline on the same cases (or a stratified subset).
-- Replicate on a second model / vendor with the same 1000 texts.
-- Prompt ablation: allow “uncertain” or “low-acuity” instead of forcing High/Low.
-- Hand-label the 169 Other diagnoses for a sensitivity analysis.
+- Collect a clinician baseline on the same cases (or a stratified subset). That is the remaining gap that would let the paper say “more defensive than doctors,” not only “defensive on two-sided stories.”
+- Real ED prevalence is not 50/50. A calibrated comparison against empirical base rates would sit on top of this dataset.
+- Ablation and sycophancy on the other five models, if a reviewer wants protocol-level generality beyond Grok.
 
 ---
 

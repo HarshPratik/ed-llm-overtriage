@@ -1,6 +1,6 @@
 # Phase 3–4 analysis outputs
 
-Target: **gpt-5.6-terra**. Generator: gpt-5.6-sol. N = 1000 synthetic cases.
+Terra lives in this folder. Replication models have their own subfolders. The six-model table is `COMPARISON.md`. Cross-model figure and κ: `python scripts/summarize_models.py`.
 
 ## Regenerating
 

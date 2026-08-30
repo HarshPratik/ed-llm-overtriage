@@ -1,0 +1,113 @@
+Pair_ID,Low_Risk_Disease,High_Risk_Disease,Model_Diagnosis,n
+PAIR-004,GERD,Aortic dissection,Acute Myocardial Infarction,2
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome (Unstable Angina / NSTEMI),1
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome (acute myocardial infarction),1
+PAIR-004,GERD,Aortic dissection,Acute myocardial infarction (STEMI),1
+PAIR-006,GERD,Pulmonary embolism,Spontaneous Pneumothorax,1
+PAIR-006,GERD,Pulmonary embolism,Spontaneous pneumothorax,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute Asthma Exacerbation,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute Decompensated Heart Failure,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute asthma exacerbation,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute decompensated heart failure (flash pulmonary edema),1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Asthma exacerbation (acute),1
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary Embolism,2
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Acute Pulmonary Embolism,1
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,COPD exacerbation,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation,7
+PAIR-009,Acute bronchitis,Pneumonia,Acute Asthma Exacerbation,3
+PAIR-009,Acute bronchitis,Pneumonia,Acute severe asthma exacerbation,2
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary Embolism,2
+PAIR-009,Acute bronchitis,Pneumonia,Acute decompensated heart failure,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute exacerbation of COPD,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute infective exacerbation of COPD,1
+PAIR-009,Acute bronchitis,Pneumonia,Asthma exacerbation,1
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary embolism,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation,4
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary Embolism,3
+PAIR-010,COPD exacerbation,Pneumonia,Acute Asthma Exacerbation,1
+PAIR-010,COPD exacerbation,Pneumonia,"Acute Asthma Exacerbation (post-infectious, triggered by recent respiratory infection)",1
+PAIR-010,COPD exacerbation,Pneumonia,Acute Bronchitis,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute decompensated heart failure (heart failure exacerbation),1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary Embolism,6
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Community-acquired pneumonia,4
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Acute Pulmonary Embolism,1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary embolism,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary Embolism,3
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute exacerbation of chronic obstructive pulmonary disease (COPD),2
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary embolism,2
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute Pulmonary Embolism,1
+PAIR-013,Community-acquired pneumonia,Pulmonary embolism,Secondary Spontaneous Pneumothorax,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Organophosphate (pesticide) poisoning,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Aortic Stenosis,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Atrial Fibrillation with Rapid Ventricular Response,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Community-acquired pneumonia with sepsis,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Caffeine-induced palpitations,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,"Panic attack (anxiety-related palpitations, likely exacerbated by excessive caffeine intake)",1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced palpitations,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced palpitations (excessive caffeine intake),1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced palpitations (likely caffeine-exacerbated tachyarrhythmia),1
+PAIR-018,Migraine,Subarachnoid hemorrhage,Acute bacterial meningitis,1
+PAIR-018,Migraine,Subarachnoid hemorrhage,"Acute intracranial hemorrhage (hypertensive intracerebral hemorrhage, suspect anticoagulant-related bleeding with possible sentinel headache)",1
+PAIR-018,Migraine,Subarachnoid hemorrhage,Meningitis,1
+PAIR-019,Migraine with aura,Ischemic stroke,Subarachnoid hemorrhage,2
+PAIR-019,Migraine with aura,Ischemic stroke,Bacterial Meningitis,1
+PAIR-020,Migraine,Brain tumor,Bacterial Meningitis,3
+PAIR-020,Migraine,Brain tumor,Subarachnoid hemorrhage,3
+PAIR-020,Migraine,Brain tumor,Acute bacterial meningitis,2
+PAIR-020,Migraine,Brain tumor,Intracerebral Hemorrhage,2
+PAIR-020,Migraine,Brain tumor,Subarachnoid Hemorrhage,2
+PAIR-020,Migraine,Brain tumor,Acute ischemic stroke (cardioembolic TIA/aphasic event from atrial fibrillation),1
+PAIR-020,Migraine,Brain tumor,Brain abscess,1
+PAIR-020,Migraine,Brain tumor,Chronic Subdural Hematoma,1
+PAIR-020,Migraine,Brain tumor,Intracerebral hemorrhage (spontaneous parenchymal brain hemorrhage),1
+PAIR-020,Migraine,Brain tumor,Subdural hematoma,1
+PAIR-020,Migraine,Brain tumor,Tension-type headache,1
+PAIR-020,Migraine,Brain tumor,Transient Ischemic Attack,1
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid Hemorrhage,2
+PAIR-021,Viral syndrome,Meningitis,Acute Migraine (migraine with aura),1
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid hemorrhage,1
+PAIR-022,BPPV,Posterior circulation stroke,Acute Peripheral Vestibular Neuritis,1
+PAIR-022,BPPV,Posterior circulation stroke,Acute Peripheral Vestibulopathy (Acute Labyrinthitis/Vestibular Neuritis),1
+PAIR-022,BPPV,Posterior circulation stroke,Acute vestibular neuritis,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Carbon Monoxide Poisoning,2
+PAIR-023,Seizure with postictal state,Ischemic stroke,Subarachnoid Hemorrhage,1
+PAIR-024,Multiple sclerosis relapse,Ischemic stroke,Acute carbon monoxide poisoning,1
+PAIR-024,Multiple sclerosis relapse,Ischemic stroke,Migraine with brainstem aura (basilar-type migraine),1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute Cholecystitis,2
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute Appendicitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute cholecystitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Perforated peptic ulcer,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute Pancreatitis (likely gallstone-related),1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute pancreatitis,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Peptic Ulcer Disease,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,"Small Bowel Obstruction (adhesive, from prior abdominal surgery)",1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,"Small Bowel Obstruction (adhesive, post-surgical)",1
+PAIR-027,Constipation,Small bowel obstruction,Acute gastroenteritis,1
+PAIR-027,Constipation,Small bowel obstruction,Intestinal (bowel) obstruction,1
+PAIR-028,Biliary colic,Acute cholangitis,Acute Cholecystitis,12
+PAIR-028,Biliary colic,Acute cholangitis,Acute cholecystitis,8
+PAIR-028,Biliary colic,Acute cholangitis,Small Bowel Obstruction,1
+PAIR-029,Biliary colic,Acute pancreatitis,Acute Cholecystitis,10
+PAIR-029,Biliary colic,Acute pancreatitis,Acute cholecystitis,8
+PAIR-029,Biliary colic,Acute pancreatitis,Acute appendicitis,1
+PAIR-029,Biliary colic,Acute pancreatitis,Lead poisoning (lead colic),1
+PAIR-029,Biliary colic,Acute pancreatitis,Small Bowel Obstruction,1
+PAIR-029,Biliary colic,Acute pancreatitis,"Small bowel obstruction (adhesive, post-surgical)",1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Pancreatitis,3
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Cholecystitis,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Gallstone Pancreatitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute appendicitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Small Bowel Obstruction (Adhesive),1
+PAIR-032,Gastritis,NSTEMI,Acute Cholecystitis,2
+PAIR-032,Gastritis,NSTEMI,Acute Pancreatitis,2
+PAIR-032,Gastritis,NSTEMI,Acute Mesenteric Ischemia,1
+PAIR-032,Gastritis,NSTEMI,Acute mesenteric ischemia,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypoglycemia,2
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic Cardiomyopathy with exertional/positional syncope,1
+PAIR-035,Vasovagal syncope,Complete heart block,Tachyarrhythmia-induced syncope,1
+PAIR-038,Cellulitis,Deep vein thrombosis,Necrotizing fasciitis,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Acute Lumbar Muscle Strain with Sciatica,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Acute Pyelonephritis,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Mechanical Low Back Pain (Lumbar Muscle Strain),1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Pyelonephritis,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Vertebral compression fracture (lumbar),1

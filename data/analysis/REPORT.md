@@ -35,7 +35,7 @@ Among cases mapped to either pole (n = 831):
 - Two-sided binomial p = 3.017e-27
 - Chi-square vs 50/50: χ² = 114.90, p = 8.281e-27
 
-Broad over-triage (high-risk pole or another emergency diagnosis): 71.1% of 1000 (p = 5.765e-42 vs 50%).
+Broad over-triage (high-risk pole or another emergency diagnosis): 73.7% of 1000 (p = 7.012e-53 vs 50%).
 
 Model self-label High: 93.1% of 1000 (p = 5.335e-194 vs 50%).
 

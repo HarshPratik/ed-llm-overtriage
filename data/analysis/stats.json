@@ -70,18 +70,18 @@
   },
   "broad_high": {
     "label": "broad_high_all_cases",
-    "k": 711,
+    "k": 737,
     "n": 1000,
-    "proportion": 0.711,
-    "percent": 71.1,
+    "proportion": 0.737,
+    "percent": 73.7,
     "wilson_ci_95": [
-      0.682139,
-      0.738246
+      0.708842,
+      0.763344
     ],
-    "variance": 0.205479,
-    "std": 0.453298,
-    "binomial_greater_p": 5.764963253837143e-42,
-    "binomial_two_sided_p": 1.1529926507674286e-41
+    "variance": 0.193831,
+    "std": 0.440262,
+    "binomial_greater_p": 7.011910810727188e-53,
+    "binomial_two_sided_p": 1.4023821621454377e-52
   },
   "self_risk_high": {
     "label": "self_label_high",
@@ -108,7 +108,7 @@
     "high_risk": 570,
     "low_risk": 261,
     "other": 169,
-    "broad_high": 711,
+    "broad_high": 737,
     "self_high": 931,
     "mapped": 831
   },
@@ -121,6 +121,11 @@
   },
   "mapping_rule": "Alias match on Model_Diagnosis vs that pair's poles. If both match, classify high-risk. Unmapped labels are Other; emergency keywords become other_high.",
   "null_hypothesis": "Among pair-mapped diagnoses, P(high-risk pole) = 0.5",
+  "other_bins": {
+    "": 831,
+    "other_high": 167,
+    "other_low": 2
+  },
   "figures": {
     "overall_bar": "D:\\research_triage\\data\\analysis\\figures\\overall_choice_bar.png",
     "overall_pie": "D:\\research_triage\\data\\analysis\\figures\\overall_choice_pie.png",

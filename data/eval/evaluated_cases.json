@@ -3956,8 +3956,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0166",
@@ -4004,8 +4004,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0168",
@@ -4196,8 +4196,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0176",
@@ -4844,8 +4844,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0203",
@@ -4892,8 +4892,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0205",
@@ -4940,8 +4940,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0207",
@@ -5012,8 +5012,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0210",
@@ -5156,8 +5156,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0216",
@@ -5180,8 +5180,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0217",
@@ -5204,8 +5204,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0218",
@@ -5324,8 +5324,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0223",
@@ -5396,8 +5396,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0226",
@@ -5516,8 +5516,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0231",
@@ -5540,8 +5540,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0232",
@@ -5564,8 +5564,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_low",
-    "Broad_Pole": "low_risk"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0233",
@@ -5756,8 +5756,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0241",
@@ -5972,8 +5972,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0250",
@@ -7076,8 +7076,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0296",
@@ -7844,8 +7844,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0328",
@@ -11564,8 +11564,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0483",
@@ -20588,8 +20588,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0859",
@@ -20636,8 +20636,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0861",
@@ -20900,8 +20900,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0872",
@@ -20924,8 +20924,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0873",
@@ -20972,8 +20972,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0875",
@@ -23612,8 +23612,8 @@
     "Mapped_Pole": "other",
     "Mapping_Match": "",
     "Mapping_Rule": "unmapped",
-    "Other_Bin": "other_unknown",
-    "Broad_Pole": "other"
+    "Other_Bin": "other_high",
+    "Broad_Pole": "high_risk"
   },
   {
     "Case_ID": "CH-0985",

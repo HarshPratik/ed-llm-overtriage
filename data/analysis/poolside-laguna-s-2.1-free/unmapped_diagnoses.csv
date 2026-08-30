@@ -1,0 +1,149 @@
+Pair_ID,Low_Risk_Disease,High_Risk_Disease,Model_Diagnosis,n
+PAIR-003,Costochondritis,STEMI,Pulmonary Embolism,1
+PAIR-004,GERD,Aortic dissection,Acute myocardial infarction,13
+PAIR-004,GERD,Aortic dissection,Acute Myocardial Infarction,7
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome,1
+PAIR-004,GERD,Aortic dissection,Pulmonary Embolism,1
+PAIR-004,GERD,Aortic dissection,ST-Elevation Myocardial Infarction (STEMI),1
+PAIR-005,Atrial fibrillation,NSTEMI,Paroxysmal supraventricular tachycardia (PSVT),1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute asthma exacerbation,2
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute decompensated heart failure,2
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute bronchitis,1
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary embolism,5
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary Embolism,3
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary Embolism,5
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation,2
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary embolism,2
+PAIR-009,Acute bronchitis,Pneumonia,Acute myocardial infarction,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation,3
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary embolism,3
+PAIR-010,COPD exacerbation,Pneumonia,Acute decompensated heart failure,2
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary Embolism,2
+PAIR-010,COPD exacerbation,Pneumonia,Acute Bronchitis,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute Decompensated Heart Failure,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute Respiratory Distress Syndrome (ARDS),1
+PAIR-010,COPD exacerbation,Pneumonia,Acute Severe Asthma Exacerbation,1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary embolism,4
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary Embolism,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pneumonia,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary Embolism,4
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute Respiratory Distress Syndrome,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute myocardial infarction,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute respiratory distress syndrome,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Acute Heart Failure,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Metal fume fever,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Acute myocardial infarction,3
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Acute Coronary Syndrome,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Acute anxiety/panic attack,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Caffeine-induced tachyarrhythmia,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Panic Attack,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Panic attack,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Acute Coronary Syndrome,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Acute Stress-induced Cardiomyopathy,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced arrhythmia (sinus tachycardia with premature beats),1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Paroxysmal Supraventricular Tachycardia,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Sinus tachycardia,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Supraventricular Tachycardia,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Supraventricular Tachycardia (SVT),1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Supraventricular tachycardia,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,"Tachycardia, unspecified (likely supraventricular tachycardia)",1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,supraventricular tachycardia,1
+PAIR-018,Migraine,Subarachnoid hemorrhage,Bacterial meningitis,2
+PAIR-019,Migraine with aura,Ischemic stroke,Cerebral venous sinus thrombosis,4
+PAIR-019,Migraine with aura,Ischemic stroke,Acute cerebral venous sinus thrombosis,2
+PAIR-019,Migraine with aura,Ischemic stroke,Subarachnoid Hemorrhage,2
+PAIR-019,Migraine with aura,Ischemic stroke,Bacterial meningitis,1
+PAIR-019,Migraine with aura,Ischemic stroke,Cerebral Venous Sinus Thrombosis,1
+PAIR-019,Migraine with aura,Ischemic stroke,Cerebral small vessel disease (lacunar infarcts),1
+PAIR-019,Migraine with aura,Ischemic stroke,Meningitis,1
+PAIR-020,Migraine,Brain tumor,Bacterial meningitis,5
+PAIR-020,Migraine,Brain tumor,Subarachnoid Hemorrhage,5
+PAIR-020,Migraine,Brain tumor,Stroke (cerebrovascular accident),2
+PAIR-020,Migraine,Brain tumor,Acute Bacterial Meningitis,1
+PAIR-020,Migraine,Brain tumor,Acute cerebral venous sinus thrombosis,1
+PAIR-020,Migraine,Brain tumor,Acute meningitis,1
+PAIR-020,Migraine,Brain tumor,Acute severe headache,1
+PAIR-020,Migraine,Brain tumor,Intracerebral hemorrhage,1
+PAIR-020,Migraine,Brain tumor,Subarachnoid hemorrhage,1
+PAIR-021,Viral syndrome,Meningitis,Migraine with aura,1
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid Hemorrhage,1
+PAIR-022,BPPV,Posterior circulation stroke,Vestibular Neuritis,2
+PAIR-022,BPPV,Posterior circulation stroke,Vestibular neuritis,1
+PAIR-022,BPPV,Posterior circulation stroke,Vestibular neuronitis,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Cerebral Venous Sinus Thrombosis,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Cerebral amyloid angiopathy,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Cerebral venous sinus thrombosis,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Diabetic ketoacidosis,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Migraine with aura (including transient neurological symptoms),1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Multiple Sclerosis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute Appendicitis,3
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute mesenteric ischemia,3
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute cholecystitis,2
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute Cholecystitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute Gastritis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute appendicitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute pancreatitis,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Perforated peptic ulcer,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute pancreatitis,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Small Bowel Obstruction,1
+PAIR-027,Constipation,Small bowel obstruction,Acute diverticulitis,2
+PAIR-027,Constipation,Small bowel obstruction,Acute sigmoid volvulus,2
+PAIR-027,Constipation,Small bowel obstruction,Acute Appendicitis,1
+PAIR-027,Constipation,Small bowel obstruction,Acute Colonic Pseudo-Obstruction (Ogilvie's Syndrome),1
+PAIR-027,Constipation,Small bowel obstruction,Acute Diverticulitis,1
+PAIR-027,Constipation,Small bowel obstruction,Acute Mesenteric Ischemia,1
+PAIR-027,Constipation,Small bowel obstruction,Acute Pancreatitis,1
+PAIR-027,Constipation,Small bowel obstruction,Acute colonic pseudo-obstruction (Ogilvie's syndrome),1
+PAIR-027,Constipation,Small bowel obstruction,Acute gastroenteritis,1
+PAIR-027,Constipation,Small bowel obstruction,Acute sigmoid diverticulitis,1
+PAIR-027,Constipation,Small bowel obstruction,Opioid-induced acute gastroparesis,1
+PAIR-027,Constipation,Small bowel obstruction,Sigmoid Volvulus,1
+PAIR-027,Constipation,Small bowel obstruction,Sigmoid volvulus,1
+PAIR-028,Biliary colic,Acute cholangitis,Acute cholecystitis,12
+PAIR-028,Biliary colic,Acute cholangitis,Acute Calculous Cholecystitis,4
+PAIR-028,Biliary colic,Acute cholangitis,Acute Cholecystitis,4
+PAIR-028,Biliary colic,Acute cholangitis,Acute Appendicitis,1
+PAIR-028,Biliary colic,Acute cholangitis,Acute appendicitis,1
+PAIR-028,Biliary colic,Acute cholangitis,Acute calculous cholecystitis,1
+PAIR-028,Biliary colic,Acute cholangitis,Cholecystitis,1
+PAIR-029,Biliary colic,Acute pancreatitis,Acute cholecystitis,11
+PAIR-029,Biliary colic,Acute pancreatitis,Acute Calculous Cholecystitis,3
+PAIR-029,Biliary colic,Acute pancreatitis,Acute appendicitis,3
+PAIR-029,Biliary colic,Acute pancreatitis,Acute Cholecystitis,1
+PAIR-029,Biliary colic,Acute pancreatitis,Acute calculous cholecystitis,1
+PAIR-029,Biliary colic,Acute pancreatitis,Acute gastritis (NSAID-induced),1
+PAIR-029,Biliary colic,Acute pancreatitis,Duodenal ulcer disease with perforation,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute myocardial infarction,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute pancreatitis,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Mesenteric Ischemia,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Pancreatitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute gastroenteritis,1
+PAIR-031,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,Sigmoid Volvulus,1
+PAIR-031,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,Sigmoid volvulus,1
+PAIR-032,Gastritis,NSTEMI,Acute Pancreatitis,5
+PAIR-032,Gastritis,NSTEMI,Acute pancreatitis,5
+PAIR-032,Gastritis,NSTEMI,Acute Acalculous Cholecystitis,1
+PAIR-032,Gastritis,NSTEMI,Acute gastroduodenal ulcer,1
+PAIR-033,Nephrolithiasis,Pyelonephritis,Acute appendicitis,1
+PAIR-033,Nephrolithiasis,Pyelonephritis,Acute pancreatitis,1
+PAIR-034,Hemorrhoids,Upper GI bleed,Colorectal Cancer,1
+PAIR-034,Hemorrhoids,Upper GI bleed,Peptic Ulcer Disease,1
+PAIR-034,Hemorrhoids,Upper GI bleed,Peptic ulcer disease,1
+PAIR-035,Vasovagal syncope,Complete heart block,Syncope,4
+PAIR-035,Vasovagal syncope,Complete heart block,Cardiac arrhythmia (likely tachycardia or bradycardia secondary to beta-blocker use in diabetes),1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic Cardiomyopathy,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypoglycemia,1
+PAIR-035,Vasovagal syncope,Complete heart block,"Syncope (cardiogenic, likely arrhythmic)",1
+PAIR-036,UTI with delirium,Subdural hematoma,Stroke,2
+PAIR-036,UTI with delirium,Subdural hematoma,Acute cerebrovascular accident (ischemic stroke),1
+PAIR-036,UTI with delirium,Subdural hematoma,Cerebrovascular accident (ischemic stroke),1
+PAIR-036,UTI with delirium,Subdural hematoma,Intracranial hemorrhage,1
+PAIR-037,Uncomplicated UTI,Sepsis,Acute prostatitis,1
+PAIR-037,Uncomplicated UTI,Sepsis,Diabetic Ketoacidosis,1
+PAIR-037,Uncomplicated UTI,Sepsis,Diabetic ketoacidosis,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Cauda Equina Syndrome,2
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Cauda equina syndrome,2
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Acute lumbar disc herniation with cauda equina syndrome,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Pyelonephritis,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Vertebral Compression Fracture,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Vertebral compression fracture,1

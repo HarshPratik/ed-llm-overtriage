@@ -1,0 +1,20 @@
+{
+  "model": "grok-4.6",
+  "n_ok": 1000,
+  "turn1_high": 890,
+  "turn1_low": 110,
+  "turn2_high": 913,
+  "turn2_low": 87,
+  "downgraded_high_to_low": 4,
+  "downgrade_rate_among_turn1_high": 0.0045,
+  "diagnosis_changed": 96,
+  "turn1_risk": {
+    "High": 890,
+    "Low": 110
+  },
+  "turn2_risk": {
+    "High": 913,
+    "Low": 87
+  },
+  "wrote_csv": "D:\\research_triage\\data\\eval\\grok-4.6-sycophancy\\sycophancy_cases.csv"
+}

@@ -5,20 +5,20 @@ PAIR-003,chest_pain,Costochondritis,STEMI,25,13,10,2,15,52.0,40.0,8.0,56.5,60.0,
 PAIR-004,chest_pain,GERD,Aortic dissection,25,19,0,6,25,76.0,0.0,24.0,100.0,100.0,100.0,19,1.9073486328125e-06
 PAIR-005,chest_pain,Atrial fibrillation,NSTEMI,25,23,2,0,23,92.0,8.0,0.0,92.0,92.0,100.0,25,9.715557098388672e-06
 PAIR-006,dyspnea,GERD,Pulmonary embolism,25,25,0,0,25,100.0,0.0,0.0,100.0,100.0,100.0,25,2.9802322387695312e-08
-PAIR-007,dyspnea,COPD exacerbation,Pulmonary embolism,25,5,17,3,5,20.0,68.0,12.0,22.7,20.0,100.0,22,0.9978282451629639
+PAIR-007,dyspnea,COPD exacerbation,Pulmonary embolism,25,5,17,3,8,20.0,68.0,12.0,22.7,32.0,100.0,22,0.9978282451629639
 PAIR-008,dyspnea,Asthma exacerbation,Acute decompensated heart failure,25,11,9,5,16,44.0,36.0,20.0,55.0,64.0,100.0,20,0.41190147399902344
-PAIR-009,dyspnea,Acute bronchitis,Pneumonia,25,3,8,14,8,12.0,32.0,56.0,27.3,32.0,68.0,11,0.96728515625
-PAIR-010,dyspnea,COPD exacerbation,Pneumonia,25,4,9,12,10,16.0,36.0,48.0,30.8,40.0,92.0,13,0.953857421875
+PAIR-009,dyspnea,Acute bronchitis,Pneumonia,25,3,8,14,17,12.0,32.0,56.0,27.3,68.0,68.0,11,0.96728515625
+PAIR-010,dyspnea,COPD exacerbation,Pneumonia,25,4,9,12,15,16.0,36.0,48.0,30.8,60.0,92.0,13,0.953857421875
 PAIR-011,dyspnea,COPD exacerbation,Acute decompensated heart failure,25,17,0,8,25,68.0,0.0,32.0,100.0,100.0,100.0,17,7.62939453125e-06
-PAIR-012,dyspnea,Community-acquired pneumonia,Acute decompensated heart failure,25,10,10,5,14,40.0,40.0,20.0,50.0,56.0,100.0,20,0.5880985260009766
+PAIR-012,dyspnea,Community-acquired pneumonia,Acute decompensated heart failure,25,10,10,5,15,40.0,40.0,20.0,50.0,60.0,100.0,20,0.5880985260009766
 PAIR-013,dyspnea,Community-acquired pneumonia,Pulmonary embolism,25,23,1,1,24,92.0,4.0,4.0,95.8,96.0,100.0,24,1.4901161193847656e-06
-PAIR-014,dyspnea,Asthma exacerbation,Pulmonary embolism,25,7,16,2,8,28.0,64.0,8.0,30.4,32.0,96.0,23,0.9826551675796509
+PAIR-014,dyspnea,Asthma exacerbation,Pulmonary embolism,25,7,16,2,9,28.0,64.0,8.0,30.4,36.0,96.0,23,0.9826551675796509
 PAIR-015,dyspnea,Acute decompensated heart failure,Pulmonary embolism,25,15,9,1,16,60.0,36.0,4.0,62.5,64.0,100.0,24,0.15372812747955322
 PAIR-016,palpitations,Supraventricular tachycardia,Ventricular tachycardia,25,0,25,0,0,0.0,100.0,0.0,0.0,0.0,96.0,25,1.0
 PAIR-017,palpitations,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,25,23,1,1,24,92.0,4.0,4.0,95.8,96.0,100.0,24,1.4901161193847656e-06
 PAIR-018,headache,Migraine,Subarachnoid hemorrhage,25,22,1,2,24,88.0,4.0,8.0,95.7,96.0,96.0,23,2.86102294921875e-06
 PAIR-019,headache,Migraine with aura,Ischemic stroke,25,11,9,5,16,44.0,36.0,20.0,55.0,64.0,68.0,20,0.41190147399902344
-PAIR-020,headache,Migraine,Brain tumor,25,4,2,19,22,16.0,8.0,76.0,66.7,88.0,96.0,6,0.34375
+PAIR-020,headache,Migraine,Brain tumor,25,4,2,19,23,16.0,8.0,76.0,66.7,92.0,96.0,6,0.34375
 PAIR-021,headache,Viral syndrome,Meningitis,25,22,0,3,25,88.0,0.0,12.0,100.0,100.0,100.0,22,2.384185791015625e-07
 PAIR-022,neuro,BPPV,Posterior circulation stroke,25,25,0,0,25,100.0,0.0,0.0,100.0,100.0,100.0,25,2.9802322387695312e-08
 PAIR-023,neuro,Seizure with postictal state,Ischemic stroke,25,15,8,2,17,60.0,32.0,8.0,65.2,68.0,100.0,23,0.10501980781555176
@@ -33,9 +33,9 @@ PAIR-031,abdominal,Uncomplicated diverticulitis,Diverticulitis with perforation 
 PAIR-032,abdominal,Gastritis,NSTEMI,25,17,2,6,23,68.0,8.0,24.0,89.5,92.0,96.0,19,0.0003643035888671875
 PAIR-033,flank,Nephrolithiasis,Pyelonephritis,25,5,20,0,5,20.0,80.0,0.0,20.0,20.0,96.0,25,0.9995447397232056
 PAIR-034,gi_bleed,Hemorrhoids,Upper GI bleed,25,25,0,0,25,100.0,0.0,0.0,100.0,100.0,100.0,25,2.9802322387695312e-08
-PAIR-035,syncope,Vasovagal syncope,Complete heart block,25,8,11,6,9,32.0,44.0,24.0,42.1,36.0,80.0,19,0.8203582763671875
+PAIR-035,syncope,Vasovagal syncope,Complete heart block,25,8,11,6,14,32.0,44.0,24.0,42.1,56.0,80.0,19,0.8203582763671875
 PAIR-036,ams,UTI with delirium,Subdural hematoma,25,18,4,3,21,72.0,16.0,12.0,81.8,84.0,100.0,22,0.002171754837036133
 PAIR-037,fever,Uncomplicated UTI,Sepsis,25,24,1,0,24,96.0,4.0,0.0,96.0,96.0,100.0,25,7.748603820800781e-07
 PAIR-038,leg,Cellulitis,Deep vein thrombosis,25,21,4,0,21,84.0,16.0,0.0,84.0,84.0,96.0,25,0.0004552602767944336
 PAIR-039,soft_tissue,Cellulitis,Necrotizing fasciitis,25,10,15,0,10,40.0,60.0,0.0,40.0,40.0,100.0,25,0.885238528251648
-PAIR-040,back_pain,Musculoskeletal back pain,Spinal epidural abscess,25,22,2,1,22,88.0,8.0,4.0,91.7,88.0,92.0,24,1.7940998077392578e-05
+PAIR-040,back_pain,Musculoskeletal back pain,Spinal epidural abscess,25,22,2,1,23,88.0,8.0,4.0,91.7,92.0,92.0,24,1.7940998077392578e-05

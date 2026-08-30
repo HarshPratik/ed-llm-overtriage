@@ -1,0 +1,21 @@
+{
+  "model": "grok-4.6",
+  "ablation": true,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 948,
+    "Low": 26,
+    "Uncertain": 26
+  },
+  "mean_latency_sec": 13.245,
+  "mean_attempts": 1.0,
+  "mean_input_tokens": 2239.8,
+  "total_factory_credits": 1229859.0,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\grok-4.6-ablation\\evaluated_cases.csv",
+  "wrote_jsonl": "D:\\research_triage\\data\\eval\\grok-4.6-ablation\\model_responses.jsonl",
+  "uncertain_diagnosis": 231,
+  "named_next_test": 985
+}

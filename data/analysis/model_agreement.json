@@ -1,0 +1,354 @@
+{
+  "n_overlap": 1000,
+  "models": [
+    "gpt-5.6-terra",
+    "grok-4.6",
+    "gemini-3.7-flash",
+    "glm-5.3-flash",
+    "minimax-m3-free",
+    "laguna-s-2.1-free"
+  ],
+  "endpoints": {
+    "gpt-5.6-terra": {
+      "n": 1000,
+      "self_high": 931,
+      "self_high_pct": 93.1,
+      "high_pole": 570,
+      "high_pole_pct": 57.0,
+      "low_pole": 261,
+      "low_pole_pct": 26.1,
+      "other": 169,
+      "other_pct": 16.9,
+      "mapped": 831,
+      "high_among_mapped": 570,
+      "high_among_mapped_pct": 68.6,
+      "broad_high": 737,
+      "broad_high_pct": 73.7
+    },
+    "grok-4.6": {
+      "n": 1000,
+      "self_high": 877,
+      "self_high_pct": 87.7,
+      "high_pole": 494,
+      "high_pole_pct": 49.4,
+      "low_pole": 349,
+      "low_pole_pct": 34.9,
+      "other": 157,
+      "other_pct": 15.7,
+      "mapped": 843,
+      "high_among_mapped": 494,
+      "high_among_mapped_pct": 58.6,
+      "broad_high": 622,
+      "broad_high_pct": 62.2
+    },
+    "gemini-3.7-flash": {
+      "n": 1000,
+      "self_high": 832,
+      "self_high_pct": 83.2,
+      "high_pole": 469,
+      "high_pole_pct": 46.9,
+      "low_pole": 371,
+      "low_pole_pct": 37.1,
+      "other": 160,
+      "other_pct": 16.0,
+      "mapped": 840,
+      "high_among_mapped": 469,
+      "high_among_mapped_pct": 55.8,
+      "broad_high": 601,
+      "broad_high_pct": 60.1
+    },
+    "glm-5.3-flash": {
+      "n": 1000,
+      "self_high": 799,
+      "self_high_pct": 79.9,
+      "high_pole": 497,
+      "high_pole_pct": 49.7,
+      "low_pole": 311,
+      "low_pole_pct": 31.1,
+      "other": 192,
+      "other_pct": 19.2,
+      "mapped": 808,
+      "high_among_mapped": 497,
+      "high_among_mapped_pct": 61.5,
+      "broad_high": 668,
+      "broad_high_pct": 66.8
+    },
+    "minimax-m3-free": {
+      "n": 1000,
+      "self_high": 897,
+      "self_high_pct": 89.7,
+      "high_pole": 512,
+      "high_pole_pct": 51.2,
+      "low_pole": 275,
+      "low_pole_pct": 27.5,
+      "other": 213,
+      "other_pct": 21.3,
+      "mapped": 787,
+      "high_among_mapped": 512,
+      "high_among_mapped_pct": 65.1,
+      "broad_high": 708,
+      "broad_high_pct": 70.8
+    },
+    "laguna-s-2.1-free": {
+      "n": 1000,
+      "self_high": 864,
+      "self_high_pct": 86.4,
+      "high_pole": 468,
+      "high_pole_pct": 46.8,
+      "low_pole": 266,
+      "low_pole_pct": 26.6,
+      "other": 266,
+      "other_pct": 26.6,
+      "mapped": 734,
+      "high_among_mapped": 468,
+      "high_among_mapped_pct": 63.8,
+      "broad_high": 686,
+      "broad_high_pct": 68.6
+    }
+  },
+  "all_six_self_high": {
+    "k": 671,
+    "n": 1000,
+    "pct": 67.1
+  },
+  "not_unanimous_high": {
+    "k": 329,
+    "n": 1000
+  },
+  "all_six_high_pole": {
+    "k": 273,
+    "n": 1000,
+    "pct": 27.3
+  },
+  "fleiss_self_high": {
+    "n_cases": 1000,
+    "n_raters": 6,
+    "n_categories": 2,
+    "p_bar": 0.8708,
+    "p_e": 0.7689,
+    "kappa": 0.441
+  },
+  "fleiss_mapped_pole": {
+    "n_cases": 1000,
+    "n_raters": 6,
+    "n_categories": 3,
+    "p_bar": 0.7541,
+    "p_e": 0.3822,
+    "kappa": 0.602
+  },
+  "pairwise_self_risk_kappa": {
+    "gpt-5.6-terra vs grok-4.6": {
+      "n": 1000,
+      "observed": 0.926,
+      "expected": 0.825,
+      "kappa": 0.5772,
+      "n_agree": 926
+    },
+    "gpt-5.6-terra vs gemini-3.7-flash": {
+      "n": 1000,
+      "observed": 0.883,
+      "expected": 0.7862,
+      "kappa": 0.4528,
+      "n_agree": 883
+    },
+    "gpt-5.6-terra vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.84,
+      "expected": 0.7577,
+      "kappa": 0.3396,
+      "n_agree": 840
+    },
+    "gpt-5.6-terra vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.914,
+      "expected": 0.8422,
+      "kappa": 0.455,
+      "n_agree": 914
+    },
+    "gpt-5.6-terra vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.877,
+      "expected": 0.8138,
+      "kappa": 0.3395,
+      "n_agree": 877
+    },
+    "grok-4.6 vs gemini-3.7-flash": {
+      "n": 1000,
+      "observed": 0.911,
+      "expected": 0.7503,
+      "kappa": 0.6435,
+      "n_agree": 911
+    },
+    "grok-4.6 vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.838,
+      "expected": 0.7254,
+      "kappa": 0.41,
+      "n_agree": 838
+    },
+    "grok-4.6 vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.902,
+      "expected": 0.7993,
+      "kappa": 0.5116,
+      "n_agree": 902
+    },
+    "grok-4.6 vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.871,
+      "expected": 0.7745,
+      "kappa": 0.428,
+      "n_agree": 871
+    },
+    "gemini-3.7-flash vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.841,
+      "expected": 0.6985,
+      "kappa": 0.4726,
+      "n_agree": 841
+    },
+    "gemini-3.7-flash vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.863,
+      "expected": 0.7636,
+      "kappa": 0.4205,
+      "n_agree": 863
+    },
+    "gemini-3.7-flash vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.848,
+      "expected": 0.7417,
+      "kappa": 0.4115,
+      "n_agree": 848
+    },
+    "glm-5.3-flash vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.832,
+      "expected": 0.7374,
+      "kappa": 0.3602,
+      "n_agree": 832
+    },
+    "glm-5.3-flash vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.831,
+      "expected": 0.7177,
+      "kappa": 0.4014,
+      "n_agree": 831
+    },
+    "minimax-m3-free vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.885,
+      "expected": 0.789,
+      "kappa": 0.4549,
+      "n_agree": 885
+    }
+  },
+  "pairwise_mapped_pole_kappa": {
+    "gpt-5.6-terra vs grok-4.6": {
+      "n": 1000,
+      "observed": 0.8,
+      "expected": 0.3992,
+      "kappa": 0.6671,
+      "n_agree": 800
+    },
+    "gpt-5.6-terra vs gemini-3.7-flash": {
+      "n": 1000,
+      "observed": 0.799,
+      "expected": 0.3912,
+      "kappa": 0.6698,
+      "n_agree": 799
+    },
+    "gpt-5.6-terra vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.791,
+      "expected": 0.3969,
+      "kappa": 0.6535,
+      "n_agree": 791
+    },
+    "gpt-5.6-terra vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.793,
+      "expected": 0.3996,
+      "kappa": 0.6552,
+      "n_agree": 793
+    },
+    "gpt-5.6-terra vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.684,
+      "expected": 0.3811,
+      "kappa": 0.4894,
+      "n_agree": 684
+    },
+    "grok-4.6 vs gemini-3.7-flash": {
+      "n": 1000,
+      "observed": 0.847,
+      "expected": 0.3863,
+      "kappa": 0.7507,
+      "n_agree": 847
+    },
+    "grok-4.6 vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.797,
+      "expected": 0.3842,
+      "kappa": 0.6703,
+      "n_agree": 797
+    },
+    "grok-4.6 vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.766,
+      "expected": 0.3823,
+      "kappa": 0.6211,
+      "n_agree": 766
+    },
+    "grok-4.6 vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.662,
+      "expected": 0.3658,
+      "kappa": 0.4671,
+      "n_agree": 662
+    },
+    "gemini-3.7-flash vs glm-5.3-flash": {
+      "n": 1000,
+      "observed": 0.795,
+      "expected": 0.3792,
+      "kappa": 0.6698,
+      "n_agree": 795
+    },
+    "gemini-3.7-flash vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.75,
+      "expected": 0.3762,
+      "kappa": 0.5992,
+      "n_agree": 750
+    },
+    "gemini-3.7-flash vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.667,
+      "expected": 0.3607,
+      "kappa": 0.4791,
+      "n_agree": 667
+    },
+    "glm-5.3-flash vs minimax-m3-free": {
+      "n": 1000,
+      "observed": 0.779,
+      "expected": 0.3809,
+      "kappa": 0.643,
+      "n_agree": 779
+    },
+    "glm-5.3-flash vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.691,
+      "expected": 0.3664,
+      "kappa": 0.5123,
+      "n_agree": 691
+    },
+    "minimax-m3-free vs laguna-s-2.1-free": {
+      "n": 1000,
+      "observed": 0.691,
+      "expected": 0.3694,
+      "kappa": 0.51,
+      "n_agree": 691
+    }
+  },
+  "figure": "data/analysis/figures/cross_model_endpoints.png"
+}

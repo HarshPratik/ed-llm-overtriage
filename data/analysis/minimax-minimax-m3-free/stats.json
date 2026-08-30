@@ -1,0 +1,139 @@
+{
+  "model": "minimax/minimax-m3-free",
+  "n_cases": 1000,
+  "phase3": {
+    "n_csv": 1000,
+    "n_jsonl": 1000,
+    "empty_model_diagnosis": 0,
+    "eval_not_ok": 0,
+    "json_parsed_ok": true
+  },
+  "pair_mapped": {
+    "label": "high_pole_all_cases",
+    "k": 512,
+    "n": 1000,
+    "proportion": 0.512,
+    "percent": 51.2,
+    "wilson_ci_95": [
+      0.481032,
+      0.542876
+    ],
+    "variance": 0.249856,
+    "std": 0.499856,
+    "binomial_greater_p": 0.23352256082639364,
+    "binomial_two_sided_p": 0.4670451216527873
+  },
+  "pair_mapped_low": {
+    "label": "low_pole_all_cases",
+    "k": 275,
+    "n": 1000,
+    "proportion": 0.275,
+    "percent": 27.5,
+    "wilson_ci_95": [
+      0.248225,
+      0.303497
+    ],
+    "variance": 0.199375,
+    "std": 0.446514,
+    "binomial_greater_p": 1.0,
+    "binomial_two_sided_p": 2.3247678209807455e-47
+  },
+  "pair_mapped_other": {
+    "label": "other_all_cases",
+    "k": 213,
+    "n": 1000,
+    "proportion": 0.213,
+    "percent": 21.3,
+    "wilson_ci_95": [
+      0.188747,
+      0.23945
+    ],
+    "variance": 0.167631,
+    "std": 0.409428,
+    "binomial_greater_p": 1.0,
+    "binomial_two_sided_p": 6.59361554127085e-78
+  },
+  "among_mapped": {
+    "label": "high_pole_among_mapped",
+    "k": 512,
+    "n": 787,
+    "proportion": 0.650572,
+    "percent": 65.06,
+    "wilson_ci_95": [
+      0.616602,
+      0.683079
+    ],
+    "variance": 0.227328,
+    "std": 0.476789,
+    "binomial_greater_p": 1.1578543347708088e-17,
+    "binomial_two_sided_p": 2.3157086695416176e-17
+  },
+  "broad_high": {
+    "label": "broad_high_all_cases",
+    "k": 708,
+    "n": 1000,
+    "proportion": 0.708,
+    "percent": 70.8,
+    "wilson_ci_95": [
+      0.679065,
+      0.735343
+    ],
+    "variance": 0.206736,
+    "std": 0.454682,
+    "binomial_greater_p": 8.457170296849874e-41,
+    "binomial_two_sided_p": 1.6914340593699749e-40
+  },
+  "self_risk_high": {
+    "label": "self_label_high",
+    "k": 897,
+    "n": 1000,
+    "proportion": 0.897,
+    "percent": 89.7,
+    "wilson_ci_95": [
+      0.876616,
+      0.914345
+    ],
+    "variance": 0.092391,
+    "std": 0.303959,
+    "binomial_greater_p": 4.608071043834908e-159,
+    "binomial_two_sided_p": 9.216142087669817e-159
+  },
+  "chi_square_mapped": {
+    "statistic": 71.3710292249047,
+    "pvalue": 2.959863631046327e-17,
+    "n": 787,
+    "expected_each": 393.5
+  },
+  "counts": {
+    "high_risk": 512,
+    "low_risk": 275,
+    "other": 213,
+    "broad_high": 708,
+    "self_high": 897,
+    "mapped": 787
+  },
+  "per_pair": {
+    "mean": 51.2,
+    "std": 36.4,
+    "var": 1325.29,
+    "min": 0.0,
+    "max": 100.0
+  },
+  "mapping_rule": "Alias match on Model_Diagnosis vs that pair's poles. If both match, classify high-risk. Unmapped labels are Other; emergency keywords become other_high.",
+  "null_hypothesis": "Among pair-mapped diagnoses, P(high-risk pole) = 0.5",
+  "other_bins": {
+    "": 787,
+    "other_unknown": 9,
+    "other_high": 196,
+    "other_low": 8
+  },
+  "figures": {
+    "overall_bar": "data\\analysis\\minimax-minimax-m3-free\\figures\\overall_choice_bar.png",
+    "overall_pie": "data\\analysis\\minimax-minimax-m3-free\\figures\\overall_choice_pie.png",
+    "pair_rates": "data\\analysis\\minimax-minimax-m3-free\\figures\\pair_high_risk_rates.png",
+    "cluster_heatmap": "data\\analysis\\minimax-minimax-m3-free\\figures\\cluster_heatmap.png",
+    "self_vs_mapped": "data\\analysis\\minimax-minimax-m3-free\\figures\\self_risk_vs_mapped.png",
+    "top_diagnoses": "data\\analysis\\minimax-minimax-m3-free\\figures\\top_diagnoses.png",
+    "cluster_stacked": "data\\analysis\\minimax-minimax-m3-free\\figures\\cluster_stacked.png"
+  }
+}

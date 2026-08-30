@@ -1,0 +1,18 @@
+{
+  "model": "grok-4.6",
+  "ablation": false,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 877,
+    "Low": 123
+  },
+  "mean_latency_sec": 14.083,
+  "mean_attempts": 1.0,
+  "mean_input_tokens": 2242.2,
+  "total_factory_credits": 1216414.0,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\grok-4.6\\evaluated_cases.csv",
+  "wrote_jsonl": "D:\\research_triage\\data\\eval\\grok-4.6\\model_responses.jsonl"
+}

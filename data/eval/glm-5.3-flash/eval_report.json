@@ -1,0 +1,18 @@
+{
+  "model": "glm-5.3-flash",
+  "ablation": false,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 799,
+    "Low": 201
+  },
+  "mean_latency_sec": 13.015,
+  "mean_attempts": 1.005,
+  "mean_input_tokens": 3209.6,
+  "total_factory_credits": 264247.0,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\glm-5.3-flash\\evaluated_cases.csv",
+  "wrote_jsonl": "D:\\research_triage\\data\\eval\\glm-5.3-flash\\model_responses.jsonl"
+}

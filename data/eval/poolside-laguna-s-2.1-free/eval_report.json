@@ -1,0 +1,15 @@
+{
+  "model": "poolside/laguna-s-2.1-free",
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 864,
+    "Low": 136
+  },
+  "mean_latency_sec": 96.048,
+  "mean_attempts": 1.088,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\poolside-laguna-s-2.1-free\\evaluated_cases.csv",
+  "wrote_jsonl": "D:\\research_triage\\data\\eval\\poolside-laguna-s-2.1-free\\model_responses.jsonl"
+}

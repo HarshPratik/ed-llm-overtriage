@@ -1,0 +1,18 @@
+{
+  "model": "gemini-3.7-flash",
+  "ablation": false,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 832,
+    "Low": 168
+  },
+  "mean_latency_sec": 15.545,
+  "mean_attempts": 1.002,
+  "mean_input_tokens": 4288.5,
+  "total_factory_credits": 1813226.0,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\gemini-3.7-flash\\evaluated_cases.csv",
+  "wrote_jsonl": "D:\\research_triage\\data\\eval\\gemini-3.7-flash\\model_responses.jsonl"
+}

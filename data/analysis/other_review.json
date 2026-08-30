@@ -1,0 +1,55 @@
+{
+  "n_cases": 1000,
+  "mapped": {
+    "high_risk": 570,
+    "low_risk": 261,
+    "other": 169
+  },
+  "other_bins": {
+    "other_high": 167,
+    "other_low": 2
+  },
+  "other_self_risk": {
+    "High": 167,
+    "Low": 2
+  },
+  "broad_high": {
+    "label": "broad_high_all_cases",
+    "k": 737,
+    "n": 1000,
+    "proportion": 0.737,
+    "percent": 73.7,
+    "wilson_ci_95": [
+      0.708842,
+      0.763344
+    ],
+    "variance": 0.193831,
+    "std": 0.440262,
+    "binomial_greater_p": 7.011910810727188e-53,
+    "binomial_two_sided_p": 1.4023821621454377e-52
+  },
+  "self_risk_high": {
+    "label": "self_label_high",
+    "k": 931,
+    "n": 1000,
+    "proportion": 0.931,
+    "percent": 93.1,
+    "wilson_ci_95": [
+      0.913585,
+      0.945116
+    ],
+    "variance": 0.064239,
+    "std": 0.253454,
+    "binomial_greater_p": 5.3346956289474363e-194,
+    "binomial_two_sided_p": 1.0669391257894873e-193
+  },
+  "precise_other_high_share": 0.9882,
+  "notes": [
+    "PAIR-028/029: 39 of 50 biliary-colic cases were called acute cholecystitis, a third emergency, not cholangitis or pancreatitis.",
+    "PAIR-020: migraine vs brain tumor often became SAH, ICH, meningitis, or stroke rather than tumor.",
+    "PAIR-009/010: bronchitis/COPD cases often became asthma exacerbation, PE, or heart failure.",
+    "PAIR-035 leftover cardiac-syncope labels (HCM, arrhythmic syncope) are still cannot-miss, not vasovagal.",
+    "After expanding emergency keywords, leftover unknown labels should be near zero."
+  ],
+  "n_detail_rows": 80
+}

@@ -1,0 +1,81 @@
+Pair_ID,Low_Risk_Disease,High_Risk_Disease,Model_Diagnosis,Other_Bin,n
+PAIR-028,Biliary colic,Acute cholangitis,Acute cholecystitis,other_high,20
+PAIR-029,Biliary colic,Acute pancreatitis,Acute cholecystitis,other_high,19
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation,other_high,6
+PAIR-020,Migraine,Brain tumor,Subarachnoid hemorrhage,other_high,6
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary embolism,other_high,5
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute pancreatitis,other_high,4
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute asthma exacerbation,other_high,3
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary embolism,other_high,3
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation,other_high,3
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary embolism,other_high,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Acute pulmonary embolism,other_high,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary embolism,other_high,3
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary embolism,other_high,3
+PAIR-019,Migraine with aura,Ischemic stroke,Subarachnoid hemorrhage,other_high,3
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid hemorrhage,other_high,3
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute small bowel obstruction,other_high,3
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Small bowel obstruction,other_high,3
+PAIR-032,Gastritis,NSTEMI,Acute pancreatitis,other_high,3
+PAIR-003,Costochondritis,STEMI,Pulmonary embolism,other_high,2
+PAIR-009,Acute bronchitis,Pneumonia,Acute exacerbation of chronic obstructive pulmonary disease (COPD),other_high,2
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Community-acquired pneumonia,other_high,2
+PAIR-018,Migraine,Subarachnoid hemorrhage,Acute meningitis,other_high,2
+PAIR-020,Migraine,Brain tumor,Acute intracerebral hemorrhage,other_high,2
+PAIR-023,Seizure with postictal state,Ischemic stroke,Subarachnoid hemorrhage,other_high,2
+PAIR-029,Biliary colic,Acute pancreatitis,Small bowel obstruction,other_high,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute cholecystitis,other_high,2
+PAIR-030,Gastritis,Perforated peptic ulcer,Small bowel obstruction,other_high,2
+PAIR-032,Gastritis,NSTEMI,Acute cholecystitis,other_high,2
+PAIR-036,UTI with delirium,Subdural hematoma,Acute ischemic stroke,other_high,2
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome,other_high,1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome,other_high,1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome (likely acute myocardial infarction),other_high,1
+PAIR-004,GERD,Aortic dissection,Acute coronary syndrome (non-ST-elevation myocardial infarction),other_high,1
+PAIR-004,GERD,Aortic dissection,Acute myocardial infarction,other_high,1
+PAIR-004,GERD,Aortic dissection,Pulmonary Embolism,other_high,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute bronchospasm (asthma-like exacerbation),other_high,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute decompensated heart failure with pulmonary edema,other_high,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute pulmonary embolism,other_high,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute bronchitis,other_low,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute bronchitis with bronchospasm,other_high,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute cardiogenic pulmonary edema (acute decompensated heart failure),other_high,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute decompensated heart failure,other_high,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute pulmonary embolism,other_high,1
+PAIR-010,COPD exacerbation,Pneumonia,Acute severe asthma exacerbation,other_high,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute exacerbation of chronic obstructive pulmonary disease (COPD),other_high,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute pulmonary embolism,other_high,1
+PAIR-013,Community-acquired pneumonia,Pulmonary embolism,Tension pneumothorax,other_high,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Acute coronary syndrome,other_high,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Acute exacerbation of chronic obstructive pulmonary disease (COPD),other_high,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Acute coronary syndrome,other_high,1
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Caffeine-induced supraventricular tachycardia,other_high,1
+PAIR-019,Migraine with aura,Ischemic stroke,Acute bacterial meningitis,other_high,1
+PAIR-019,Migraine with aura,Ischemic stroke,Cerebral venous sinus thrombosis,other_high,1
+PAIR-020,Migraine,Brain tumor,Acute meningitis,other_high,1
+PAIR-020,Migraine,Brain tumor,Aneurysmal subarachnoid hemorrhage,other_high,1
+PAIR-020,Migraine,Brain tumor,Anticoagulant-associated intracranial hemorrhage,other_high,1
+PAIR-020,Migraine,Brain tumor,Chronic subdural hematoma,other_high,1
+PAIR-020,Migraine,Brain tumor,Herpes simplex encephalitis,other_high,1
+PAIR-020,Migraine,Brain tumor,Hypertensive encephalopathy,other_high,1
+PAIR-020,Migraine,Brain tumor,Intracranial hemorrhage,other_high,1
+PAIR-020,Migraine,Brain tumor,Posterior circulation ischemic stroke,other_high,1
+PAIR-020,Migraine,Brain tumor,Subdural hematoma,other_high,1
+PAIR-020,Migraine,Brain tumor,Transient ischemic attack,other_high,1
+PAIR-020,Migraine,Brain tumor,Viral meningitis,other_high,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute cholecystitis,other_high,1
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute coronary syndrome,other_high,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute pancreatitis,other_high,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Biliary colic,other_low,1
+PAIR-029,Biliary colic,Acute pancreatitis,Acute calculous cholecystitis,other_high,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute coronary syndrome (acute myocardial infarction),other_high,1
+PAIR-031,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,Acute small bowel obstruction due to postoperative adhesions,other_high,1
+PAIR-032,Gastritis,NSTEMI,Small bowel obstruction,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Arrhythmic syncope,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Cardiac syncope due to paroxysmal supraventricular tachycardia,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic cardiomyopathy with arrhythmic syncope,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypertrophic cardiomyopathy with obstructive syncope,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Hypoglycemia,other_high,1
+PAIR-035,Vasovagal syncope,Complete heart block,Symptomatic cardiac arrhythmia causing syncope,other_high,1
+PAIR-036,UTI with delirium,Subdural hematoma,Acute ischemic stroke (posterior circulation),other_high,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Acute osteoporotic lumbar vertebral compression fracture,other_high,1

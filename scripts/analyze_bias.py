@@ -7,6 +7,7 @@ then computes frequencies, binomial/chi-square tests, and plots.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import math
@@ -506,6 +507,20 @@ EMERGENCY_PATTERNS = [
     r"bradyarrhythmia",
     r"pneumothorax",
     r"ileus",
+    r"asthma exacerb",
+    r"bronchospasm",
+    r"\basthma\b",
+    r"copd",
+    r"chronic obstructive",
+    r"encephalopathy",
+    r"arrhythm",
+    r"hypertrophic",
+    r"hypoglycemia",
+    r"hypoglycaemia",
+    r"syncope",
+    r"cholecystitis",
+    r"calculous",
+    r"compression fracture",
 ]
 
 BENIGN_PATTERNS = [
@@ -648,8 +663,8 @@ def chi_square_50_50(n_high: int, n_low: int) -> dict:
     }
 
 
-def load_rows() -> list[dict]:
-    with EVAL_CSV.open(encoding="utf-8", newline="") as handle:
+def load_rows(eval_csv: Path) -> list[dict]:
+    with eval_csv.open(encoding="utf-8", newline="") as handle:
         raw = list(csv.DictReader(handle))
     cleaned = []
     for row in raw:
@@ -658,10 +673,10 @@ def load_rows() -> list[dict]:
     return cleaned
 
 
-def verify_phase3(rows: list[dict]) -> dict:
+def verify_phase3(rows: list[dict], eval_jsonl: Path) -> dict:
     jsonl = []
-    if EVAL_JSONL.exists():
-        jsonl = [json.loads(line) for line in EVAL_JSONL.read_text(encoding="utf-8").splitlines() if line.strip()]
+    if eval_jsonl.exists():
+        jsonl = [json.loads(line) for line in eval_jsonl.read_text(encoding="utf-8").splitlines() if line.strip()]
     empty = sum(1 for r in rows if not (r.get("Model_Diagnosis") or "").strip())
     parse_fail = sum(1 for r in rows if str(r.get("Eval_OK", "")).lower() != "true")
     return {
@@ -796,8 +811,8 @@ def plot_overall_bar(counts: dict[str, int]) -> Path:
     values = [counts["high_risk"], counts["low_risk"], counts["other"]]
     colors = [HIGH_COLOR, LOW_COLOR, OTHER_COLOR]
     bars = ax.bar(labels, values, color=colors, width=0.64)
-    ax.set_ylabel("Cases (n = 1000)")
-    ax.set_title("gpt-5.6-terra diagnosis mapped to pair poles")
+    ax.set_ylabel(f"Cases (n = {sum(values)})")
+    ax.set_title("Diagnosis mapped to pair poles")
     ymax = max(values) * 1.18
     ax.set_ylim(0, ymax)
     for bar, value in zip(bars, values):
@@ -1015,9 +1030,37 @@ The self-label is the more extreme defensive signal: the model called the case H
 """
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Phase 3 parsing check + Phase 4 mapping")
+    parser.add_argument("--eval-csv", type=Path, default=EVAL_CSV)
+    parser.add_argument("--eval-json", type=Path, default=EVAL_JSON)
+    parser.add_argument("--eval-jsonl", type=Path, default=EVAL_JSONL)
+    parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
+    parser.add_argument(
+        "--write-original-dx",
+        action="store_true",
+        help="Also write data/synthetic/case_histories_with_diagnosis.csv (Terra default only)",
+    )
+    parser.add_argument(
+        "--update-eval-csv",
+        action="store_true",
+        help="Write mapping columns back onto --eval-csv",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
-    rows = load_rows()
-    phase3 = verify_phase3(rows)
+    args = parse_args()
+    eval_csv = args.eval_csv
+    eval_json = args.eval_json
+    eval_jsonl = args.eval_jsonl
+    out_dir = args.out_dir
+    fig_dir = out_dir / "figures"
+    write_original = args.write_original_dx or (out_dir.resolve() == OUT_DIR.resolve() and eval_csv.resolve() == EVAL_CSV.resolve())
+    update_eval = args.update_eval_csv or (eval_csv.resolve() == EVAL_CSV.resolve())
+
+    rows = load_rows(eval_csv)
+    phase3 = verify_phase3(rows, eval_jsonl)
     classified = classify(rows)
     df = pd.DataFrame(classified)
     df["Age_Band"] = df["Age"].map(age_band)
@@ -1087,36 +1130,39 @@ def main() -> int:
         },
         "mapping_rule": "Alias match on Model_Diagnosis vs that pair's poles. If both match, classify high-risk. Unmapped labels are Other; emergency keywords become other_high.",
         "null_hypothesis": "Among pair-mapped diagnoses, P(high-risk pole) = 0.5",
+        "other_bins": dict(Counter(df["Other_Bin"])),
     }
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    global FIG_DIR
+    FIG_DIR = fig_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
     keep_cols = list(df.columns)
-    write_csv(OUT_DIR / "classified_cases.csv", classified, keep_cols)
-    pair_df.to_csv(OUT_DIR / "pair_summary.csv", index=False)
-    cluster_df.to_csv(OUT_DIR / "cluster_summary.csv", index=False)
-    unmatched.to_csv(OUT_DIR / "unmapped_diagnoses.csv", index=False)
-    top_dx.to_csv(OUT_DIR / "top_diagnoses.csv", index=False)
-    pd.DataFrame(subgroups).to_csv(OUT_DIR / "subgroup_summary.csv", index=False)
-    (OUT_DIR / "stats.json").write_text(json.dumps(stats, indent=2, default=str), encoding="utf-8")
+    write_csv(out_dir / "classified_cases.csv", classified, keep_cols)
+    pair_df.to_csv(out_dir / "pair_summary.csv", index=False)
+    cluster_df.to_csv(out_dir / "cluster_summary.csv", index=False)
+    unmatched.to_csv(out_dir / "unmapped_diagnoses.csv", index=False)
+    top_dx.to_csv(out_dir / "top_diagnoses.csv", index=False)
+    pd.DataFrame(subgroups).to_csv(out_dir / "subgroup_summary.csv", index=False)
+    (out_dir / "stats.json").write_text(json.dumps(stats, indent=2, default=str), encoding="utf-8")
 
-    # Attach mapping columns to the Phase 2/3 eval table without duplicating keys.
     eval_fields = BASE_EVAL_FIELDS + MAPPING_FIELDS
-    write_csv(EVAL_CSV, classified, eval_fields)
-    EVAL_JSON.write_text(json.dumps([{k: r[k] for k in eval_fields} for r in classified], indent=2), encoding="utf-8")
+    if update_eval:
+        write_csv(eval_csv, classified, eval_fields)
+        eval_json.write_text(json.dumps([{k: r[k] for k in eval_fields} for r in classified], indent=2), encoding="utf-8")
 
-    # Phase 3: append Model_Diagnosis to a copy of the original case table.
-    original = list(csv.DictReader(ORIGINAL_CSV.open(encoding="utf-8", newline="")))
-    by_id = {r["Case_ID"]: r for r in classified}
-    with_dx = []
-    for row in original:
-        result = by_id[row["Case_ID"]]
-        item = dict(row)
-        item["Model"] = result["Model"]
-        item["Model_Diagnosis"] = result["Model_Diagnosis"]
-        item["Risk_Level_Assessment"] = result["Risk_Level_Assessment"]
-        item["Mapped_Pole"] = result["Mapped_Pole"]
-        with_dx.append(item)
-    write_csv(ORIGINAL_WITH_DX, with_dx, list(with_dx[0].keys()))
+    if write_original:
+        original = list(csv.DictReader(ORIGINAL_CSV.open(encoding="utf-8", newline="")))
+        by_id = {r["Case_ID"]: r for r in classified}
+        with_dx = []
+        for row in original:
+            result = by_id[row["Case_ID"]]
+            item = dict(row)
+            item["Model"] = result["Model"]
+            item["Model_Diagnosis"] = result["Model_Diagnosis"]
+            item["Risk_Level_Assessment"] = result["Risk_Level_Assessment"]
+            item["Mapped_Pole"] = result["Mapped_Pole"]
+            with_dx.append(item)
+        write_csv(ORIGINAL_WITH_DX, with_dx, list(with_dx[0].keys()))
 
     style_plots()
     figures = {
@@ -1129,8 +1175,8 @@ def main() -> int:
         "cluster_stacked": str(plot_cluster_stacked(cluster_df)),
     }
     stats["figures"] = figures
-    (OUT_DIR / "stats.json").write_text(json.dumps(stats, indent=2, default=str), encoding="utf-8")
-    (OUT_DIR / "REPORT.md").write_text(build_report(stats, pair_df, cluster_df), encoding="utf-8")
+    (out_dir / "stats.json").write_text(json.dumps(stats, indent=2, default=str), encoding="utf-8")
+    (out_dir / "REPORT.md").write_text(build_report(stats, pair_df, cluster_df), encoding="utf-8")
 
     print(json.dumps({k: stats[k] for k in ("n_cases", "counts", "pair_mapped", "among_mapped", "broad_high", "self_risk_high", "chi_square_mapped", "per_pair", "phase3")}, indent=2, default=str))
     print("unmapped_n", n_other, "unique_unmapped", unmatched["Model_Diagnosis"].nunique() if len(unmatched) else 0)
