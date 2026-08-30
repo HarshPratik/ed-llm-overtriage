@@ -1,0 +1,41 @@
+Pair_ID,Cluster,Low_Risk_Disease,High_Risk_Disease,n,n_high_pole,n_low_pole,n_other,n_broad_high,pct_high_pole,pct_low_pole,pct_other,pct_high_among_mapped,pct_broad_high,pct_self_risk_high,mapped_n,binomial_greater_p
+PAIR-001,chest_pain,GERD,NSTEMI,25,25,0,0,25,100.0,0.0,0.0,100.0,100.0,100.0,25,2.9802322387695312e-08
+PAIR-002,chest_pain,GERD,STEMI,25,25,0,0,25,100.0,0.0,0.0,100.0,100.0,100.0,25,2.9802322387695312e-08
+PAIR-003,chest_pain,Costochondritis,STEMI,25,1,24,0,1,4.0,96.0,0.0,4.0,4.0,4.0,25,0.9999999701976776
+PAIR-004,chest_pain,GERD,Aortic dissection,25,18,0,7,25,72.0,0.0,28.0,100.0,100.0,100.0,18,3.814697265625e-06
+PAIR-005,chest_pain,Atrial fibrillation,NSTEMI,25,24,1,0,24,96.0,4.0,0.0,96.0,96.0,100.0,25,7.748603820800781e-07
+PAIR-006,dyspnea,GERD,Pulmonary embolism,25,23,0,2,25,92.0,0.0,8.0,100.0,100.0,100.0,23,1.1920928955078125e-07
+PAIR-007,dyspnea,COPD exacerbation,Pulmonary embolism,25,7,14,4,11,28.0,56.0,16.0,33.3,44.0,100.0,21,0.9608230590820312
+PAIR-008,dyspnea,Asthma exacerbation,Acute decompensated heart failure,25,5,14,6,11,20.0,56.0,24.0,26.3,44.0,100.0,19,0.9903945922851562
+PAIR-009,dyspnea,Acute bronchitis,Pneumonia,25,6,0,19,25,24.0,0.0,76.0,100.0,100.0,100.0,6,0.015625
+PAIR-010,dyspnea,COPD exacerbation,Pneumonia,25,1,14,10,10,4.0,56.0,40.0,6.7,40.0,100.0,15,0.999969482421875
+PAIR-011,dyspnea,COPD exacerbation,Acute decompensated heart failure,25,16,0,9,25,64.0,0.0,36.0,100.0,100.0,100.0,16,1.52587890625e-05
+PAIR-012,dyspnea,Community-acquired pneumonia,Acute decompensated heart failure,25,6,11,8,13,24.0,44.0,32.0,35.3,52.0,96.0,17,0.9282684326171875
+PAIR-013,dyspnea,Community-acquired pneumonia,Pulmonary embolism,25,22,3,0,22,88.0,12.0,0.0,88.0,88.0,100.0,25,7.826089859008789e-05
+PAIR-014,dyspnea,Asthma exacerbation,Pulmonary embolism,25,7,16,2,9,28.0,64.0,8.0,30.4,36.0,100.0,23,0.9826551675796509
+PAIR-015,dyspnea,Acute decompensated heart failure,Pulmonary embolism,25,7,16,2,8,28.0,64.0,8.0,30.4,32.0,96.0,23,0.9826551675796509
+PAIR-016,palpitations,Supraventricular tachycardia,Ventricular tachycardia,25,0,17,8,0,0.0,68.0,32.0,0.0,0.0,44.0,17,1.0
+PAIR-017,palpitations,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,25,21,4,0,21,84.0,16.0,0.0,84.0,84.0,100.0,25,0.0004552602767944336
+PAIR-018,headache,Migraine,Subarachnoid hemorrhage,25,15,9,1,16,60.0,36.0,4.0,62.5,64.0,64.0,24,0.15372812747955322
+PAIR-019,headache,Migraine with aura,Ischemic stroke,25,5,15,5,10,20.0,60.0,20.0,25.0,40.0,40.0,20,0.9940910339355469
+PAIR-020,headache,Migraine,Brain tumor,25,1,3,21,20,4.0,12.0,84.0,25.0,80.0,80.0,4,0.9375
+PAIR-021,headache,Viral syndrome,Meningitis,25,17,0,8,18,68.0,0.0,32.0,100.0,72.0,72.0,17,7.62939453125e-06
+PAIR-022,neuro,BPPV,Posterior circulation stroke,25,14,4,7,15,56.0,16.0,28.0,77.8,60.0,64.0,18,0.01544189453125
+PAIR-023,neuro,Seizure with postictal state,Ischemic stroke,25,23,2,0,23,92.0,8.0,0.0,92.0,92.0,100.0,25,9.715557098388672e-06
+PAIR-024,neuro,Multiple sclerosis relapse,Ischemic stroke,25,20,5,0,20,80.0,20.0,0.0,80.0,80.0,92.0,25,0.0020386576652526855
+PAIR-025,abdominal,Viral gastroenteritis,Small bowel obstruction,25,14,6,5,17,56.0,24.0,20.0,70.0,68.0,68.0,20,0.057659149169921875
+PAIR-026,abdominal,Viral gastroenteritis,Acute appendicitis,25,5,11,9,13,20.0,44.0,36.0,31.2,52.0,56.0,16,0.9615936279296875
+PAIR-027,abdominal,Constipation,Small bowel obstruction,25,20,3,2,22,80.0,12.0,8.0,87.0,88.0,88.0,23,0.000244140625
+PAIR-028,abdominal,Biliary colic,Acute cholangitis,25,0,7,18,17,0.0,28.0,72.0,0.0,68.0,80.0,7,1.0
+PAIR-029,abdominal,Biliary colic,Acute pancreatitis,25,3,4,18,19,12.0,16.0,72.0,42.9,76.0,80.0,7,0.7734375
+PAIR-030,abdominal,Gastritis,Perforated peptic ulcer,25,0,19,6,4,0.0,76.0,24.0,0.0,16.0,64.0,19,1.0
+PAIR-031,abdominal,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,25,0,23,2,0,0.0,92.0,8.0,0.0,0.0,100.0,23,1.0
+PAIR-032,abdominal,Gastritis,NSTEMI,25,9,5,11,20,36.0,20.0,44.0,64.3,80.0,92.0,14,0.21197509765625
+PAIR-033,flank,Nephrolithiasis,Pyelonephritis,25,4,20,1,4,16.0,80.0,4.0,16.7,16.0,80.0,24,0.9998614192008972
+PAIR-034,gi_bleed,Hemorrhoids,Upper GI bleed,25,18,0,7,19,72.0,0.0,28.0,100.0,76.0,100.0,18,3.814697265625e-06
+PAIR-035,syncope,Vasovagal syncope,Complete heart block,25,1,18,6,7,4.0,72.0,24.0,5.3,28.0,32.0,19,0.9999980926513672
+PAIR-036,ams,UTI with delirium,Subdural hematoma,25,16,5,4,16,64.0,20.0,16.0,76.2,64.0,100.0,21,0.013301849365234375
+PAIR-037,fever,Uncomplicated UTI,Sepsis,25,23,1,1,23,92.0,4.0,4.0,95.8,92.0,96.0,24,1.4901161193847656e-06
+PAIR-038,leg,Cellulitis,Deep vein thrombosis,25,18,7,0,18,72.0,28.0,0.0,72.0,72.0,92.0,25,0.021642625331878662
+PAIR-039,soft_tissue,Cellulitis,Necrotizing fasciitis,25,7,18,0,7,28.0,72.0,0.0,28.0,28.0,88.0,25,0.9926833510398865
+PAIR-040,back_pain,Musculoskeletal back pain,Spinal epidural abscess,25,19,0,6,19,76.0,0.0,24.0,100.0,76.0,88.0,19,1.9073486328125e-06

@@ -1,6 +1,6 @@
 # Phase 3–4 analysis
 
-Target model: **minimax/minimax-m3-free**. Generator: gpt-5.6-sol. N = 1000 synthetic ED cases.
+Target model: **MiniMax M3**. Generator: gpt-5.6-sol. N = 1000 synthetic ED cases.
 
 ## Phase 3 parsing
 

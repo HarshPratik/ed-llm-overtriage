@@ -1,0 +1,138 @@
+{
+  "model": "gpt-5.6-terra",
+  "n_cases": 1000,
+  "phase3": {
+    "n_csv": 1000,
+    "n_jsonl": 1151,
+    "empty_model_diagnosis": 0,
+    "eval_not_ok": 0,
+    "json_parsed_ok": true
+  },
+  "pair_mapped": {
+    "label": "high_pole_all_cases",
+    "k": 602,
+    "n": 1000,
+    "proportion": 0.602,
+    "percent": 60.2,
+    "wilson_ci_95": [
+      0.571327,
+      0.631893
+    ],
+    "variance": 0.239596,
+    "std": 0.489485,
+    "binomial_greater_p": 5.924280876629812e-11,
+    "binomial_two_sided_p": 1.1848561753259623e-10
+  },
+  "pair_mapped_low": {
+    "label": "low_pole_all_cases",
+    "k": 194,
+    "n": 1000,
+    "proportion": 0.194,
+    "percent": 19.4,
+    "wilson_ci_95": [
+      0.170681,
+      0.219661
+    ],
+    "variance": 0.156364,
+    "std": 0.395429,
+    "binomial_greater_p": 1.0,
+    "binomial_two_sided_p": 3.58293144434427e-89
+  },
+  "pair_mapped_other": {
+    "label": "other_all_cases",
+    "k": 204,
+    "n": 1000,
+    "proportion": 0.204,
+    "percent": 20.4,
+    "wilson_ci_95": [
+      0.180179,
+      0.230087
+    ],
+    "variance": 0.162384,
+    "std": 0.402969,
+    "binomial_greater_p": 1.0,
+    "binomial_two_sided_p": 4.0106962464739545e-83
+  },
+  "among_mapped": {
+    "label": "high_pole_among_mapped",
+    "k": 602,
+    "n": 796,
+    "proportion": 0.756281,
+    "percent": 75.63,
+    "wilson_ci_95": [
+      0.725271,
+      0.78483
+    ],
+    "variance": 0.18432,
+    "std": 0.429325,
+    "binomial_greater_p": 1.1007923924535611e-49,
+    "binomial_two_sided_p": 2.2015847849071223e-49
+  },
+  "broad_high": {
+    "label": "broad_high_all_cases",
+    "k": 771,
+    "n": 1000,
+    "proportion": 0.771,
+    "percent": 77.1,
+    "wilson_ci_95": [
+      0.743949,
+      0.795977
+    ],
+    "variance": 0.176559,
+    "std": 0.420189,
+    "binomial_greater_p": 1.8986024167138495e-69,
+    "binomial_two_sided_p": 3.797204833427699e-69
+  },
+  "self_risk_high": {
+    "label": "self_label_high",
+    "k": 988,
+    "n": 1000,
+    "proportion": 0.988,
+    "percent": 98.8,
+    "wilson_ci_95": [
+      0.979143,
+      0.993122
+    ],
+    "variance": 0.011856,
+    "std": 0.108885,
+    "binomial_greater_p": 1.8458212596638425e-274,
+    "binomial_two_sided_p": 3.691642519327685e-274
+  },
+  "chi_square_mapped": {
+    "statistic": 209.12562814070353,
+    "pvalue": 2.131232416331432e-47,
+    "n": 796,
+    "expected_each": 398.0
+  },
+  "counts": {
+    "high_risk": 602,
+    "low_risk": 194,
+    "other": 204,
+    "broad_high": 771,
+    "self_high": 988,
+    "mapped": 796
+  },
+  "per_pair": {
+    "mean": 60.2,
+    "std": 35.89,
+    "var": 1288.16,
+    "min": 0.0,
+    "max": 100.0
+  },
+  "mapping_rule": "Alias match on Model_Diagnosis vs that pair's poles. If both match, classify high-risk. Unmapped labels are Other; emergency keywords become other_high.",
+  "null_hypothesis": "Among pair-mapped diagnoses, P(high-risk pole) = 0.5",
+  "other_bins": {
+    "": 796,
+    "other_unknown": 35,
+    "other_high": 169
+  },
+  "figures": {
+    "overall_bar": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\overall_choice_bar.png",
+    "overall_pie": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\overall_choice_pie.png",
+    "pair_rates": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\pair_high_risk_rates.png",
+    "cluster_heatmap": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\cluster_heatmap.png",
+    "self_vs_mapped": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\self_risk_vs_mapped.png",
+    "top_diagnoses": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\top_diagnoses.png",
+    "cluster_stacked": "data\\analysis\\gpt-5.6-terra-ablation\\figures\\cluster_stacked.png"
+  }
+}

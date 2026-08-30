@@ -1,0 +1,14 @@
+{
+  "model": "sarvam-105b-conversations",
+  "ablation": false,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 839,
+    "Low": 161
+  },
+  "mean_latency_sec": 13.337,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\sarvam-105b\\evaluated_cases.csv"
+}

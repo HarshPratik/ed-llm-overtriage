@@ -1,0 +1,17 @@
+{
+  "model": "poolside/laguna-s-2.1-free",
+  "ablation": true,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 875,
+    "Low": 103,
+    "Uncertain": 22
+  },
+  "mean_latency_sec": 21.969,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\poolside-laguna-s-2.1-free-ablation\\evaluated_cases.csv",
+  "uncertain_diagnosis": 76,
+  "named_next_test": 981
+}

@@ -5,8 +5,9 @@
     "grok-4.6",
     "gemini-3.7-flash",
     "glm-5.3-flash",
-    "minimax-m3-free",
-    "laguna-s-2.1-free"
+    "MiniMax M3",
+    "Laguna S-2.1",
+    "sarvam-105b"
   ],
   "endpoints": {
     "gpt-5.6-terra": {
@@ -73,7 +74,7 @@
       "broad_high": 668,
       "broad_high_pct": 66.8
     },
-    "minimax-m3-free": {
+    "MiniMax M3": {
       "n": 1000,
       "self_high": 897,
       "self_high_pct": 89.7,
@@ -89,7 +90,7 @@
       "broad_high": 708,
       "broad_high_pct": 70.8
     },
-    "laguna-s-2.1-free": {
+    "Laguna S-2.1": {
       "n": 1000,
       "self_high": 864,
       "self_high_pct": 86.4,
@@ -104,37 +105,53 @@
       "high_among_mapped_pct": 63.8,
       "broad_high": 686,
       "broad_high_pct": 68.6
+    },
+    "sarvam-105b": {
+      "n": 1000,
+      "self_high": 839,
+      "self_high_pct": 83.9,
+      "high_pole": 466,
+      "high_pole_pct": 46.6,
+      "low_pole": 319,
+      "low_pole_pct": 31.9,
+      "other": 215,
+      "other_pct": 21.5,
+      "mapped": 785,
+      "high_among_mapped": 466,
+      "high_among_mapped_pct": 59.4,
+      "broad_high": 627,
+      "broad_high_pct": 62.7
     }
   },
-  "all_six_self_high": {
-    "k": 671,
+  "all_seven_self_high": {
+    "k": 653,
     "n": 1000,
-    "pct": 67.1
+    "pct": 65.3
   },
   "not_unanimous_high": {
-    "k": 329,
+    "k": 347,
     "n": 1000
   },
-  "all_six_high_pole": {
-    "k": 273,
+  "all_seven_high_pole": {
+    "k": 254,
     "n": 1000,
-    "pct": 27.3
+    "pct": 25.4
   },
   "fleiss_self_high": {
     "n_cases": 1000,
-    "n_raters": 6,
+    "n_raters": 7,
     "n_categories": 2,
-    "p_bar": 0.8708,
-    "p_e": 0.7689,
-    "kappa": 0.441
+    "p_bar": 0.8695,
+    "p_e": 0.7631,
+    "kappa": 0.4492
   },
   "fleiss_mapped_pole": {
     "n_cases": 1000,
-    "n_raters": 6,
+    "n_raters": 7,
     "n_categories": 3,
-    "p_bar": 0.7541,
-    "p_e": 0.3822,
-    "kappa": 0.602
+    "p_bar": 0.7513,
+    "p_e": 0.3795,
+    "kappa": 0.5992
   },
   "pairwise_self_risk_kappa": {
     "gpt-5.6-terra vs grok-4.6": {
@@ -158,19 +175,26 @@
       "kappa": 0.3396,
       "n_agree": 840
     },
-    "gpt-5.6-terra vs minimax-m3-free": {
+    "gpt-5.6-terra vs MiniMax M3": {
       "n": 1000,
       "observed": 0.914,
       "expected": 0.8422,
       "kappa": 0.455,
       "n_agree": 914
     },
-    "gpt-5.6-terra vs laguna-s-2.1-free": {
+    "gpt-5.6-terra vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.877,
       "expected": 0.8138,
       "kappa": 0.3395,
       "n_agree": 877
+    },
+    "gpt-5.6-terra vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.86,
+      "expected": 0.7922,
+      "kappa": 0.3262,
+      "n_agree": 860
     },
     "grok-4.6 vs gemini-3.7-flash": {
       "n": 1000,
@@ -186,19 +210,26 @@
       "kappa": 0.41,
       "n_agree": 838
     },
-    "grok-4.6 vs minimax-m3-free": {
+    "grok-4.6 vs MiniMax M3": {
       "n": 1000,
       "observed": 0.902,
       "expected": 0.7993,
       "kappa": 0.5116,
       "n_agree": 902
     },
-    "grok-4.6 vs laguna-s-2.1-free": {
+    "grok-4.6 vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.871,
       "expected": 0.7745,
       "kappa": 0.428,
       "n_agree": 871
+    },
+    "grok-4.6 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.884,
+      "expected": 0.7556,
+      "kappa": 0.5254,
+      "n_agree": 884
     },
     "gemini-3.7-flash vs glm-5.3-flash": {
       "n": 1000,
@@ -207,40 +238,68 @@
       "kappa": 0.4726,
       "n_agree": 841
     },
-    "gemini-3.7-flash vs minimax-m3-free": {
+    "gemini-3.7-flash vs MiniMax M3": {
       "n": 1000,
       "observed": 0.863,
       "expected": 0.7636,
       "kappa": 0.4205,
       "n_agree": 863
     },
-    "gemini-3.7-flash vs laguna-s-2.1-free": {
+    "gemini-3.7-flash vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.848,
       "expected": 0.7417,
       "kappa": 0.4115,
       "n_agree": 848
     },
-    "glm-5.3-flash vs minimax-m3-free": {
+    "gemini-3.7-flash vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.875,
+      "expected": 0.7251,
+      "kappa": 0.5453,
+      "n_agree": 875
+    },
+    "glm-5.3-flash vs MiniMax M3": {
       "n": 1000,
       "observed": 0.832,
       "expected": 0.7374,
       "kappa": 0.3602,
       "n_agree": 832
     },
-    "glm-5.3-flash vs laguna-s-2.1-free": {
+    "glm-5.3-flash vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.831,
       "expected": 0.7177,
       "kappa": 0.4014,
       "n_agree": 831
     },
-    "minimax-m3-free vs laguna-s-2.1-free": {
+    "glm-5.3-flash vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.84,
+      "expected": 0.7027,
+      "kappa": 0.4618,
+      "n_agree": 840
+    },
+    "MiniMax M3 vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.885,
       "expected": 0.789,
       "kappa": 0.4549,
       "n_agree": 885
+    },
+    "MiniMax M3 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.872,
+      "expected": 0.7692,
+      "kappa": 0.4455,
+      "n_agree": 872
+    },
+    "Laguna S-2.1 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.867,
+      "expected": 0.7468,
+      "kappa": 0.4747,
+      "n_agree": 867
     }
   },
   "pairwise_mapped_pole_kappa": {
@@ -265,19 +324,26 @@
       "kappa": 0.6535,
       "n_agree": 791
     },
-    "gpt-5.6-terra vs minimax-m3-free": {
+    "gpt-5.6-terra vs MiniMax M3": {
       "n": 1000,
       "observed": 0.793,
       "expected": 0.3996,
       "kappa": 0.6552,
       "n_agree": 793
     },
-    "gpt-5.6-terra vs laguna-s-2.1-free": {
+    "gpt-5.6-terra vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.684,
       "expected": 0.3811,
       "kappa": 0.4894,
       "n_agree": 684
+    },
+    "gpt-5.6-terra vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.738,
+      "expected": 0.3852,
+      "kappa": 0.5738,
+      "n_agree": 738
     },
     "grok-4.6 vs gemini-3.7-flash": {
       "n": 1000,
@@ -293,19 +359,26 @@
       "kappa": 0.6703,
       "n_agree": 797
     },
-    "grok-4.6 vs minimax-m3-free": {
+    "grok-4.6 vs MiniMax M3": {
       "n": 1000,
       "observed": 0.766,
       "expected": 0.3823,
       "kappa": 0.6211,
       "n_agree": 766
     },
-    "grok-4.6 vs laguna-s-2.1-free": {
+    "grok-4.6 vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.662,
       "expected": 0.3658,
       "kappa": 0.4671,
       "n_agree": 662
+    },
+    "grok-4.6 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.747,
+      "expected": 0.3753,
+      "kappa": 0.595,
+      "n_agree": 747
     },
     "gemini-3.7-flash vs glm-5.3-flash": {
       "n": 1000,
@@ -314,39 +387,67 @@
       "kappa": 0.6698,
       "n_agree": 795
     },
-    "gemini-3.7-flash vs minimax-m3-free": {
+    "gemini-3.7-flash vs MiniMax M3": {
       "n": 1000,
       "observed": 0.75,
       "expected": 0.3762,
       "kappa": 0.5992,
       "n_agree": 750
     },
-    "gemini-3.7-flash vs laguna-s-2.1-free": {
+    "gemini-3.7-flash vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.667,
       "expected": 0.3607,
       "kappa": 0.4791,
       "n_agree": 667
     },
-    "glm-5.3-flash vs minimax-m3-free": {
+    "gemini-3.7-flash vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.764,
+      "expected": 0.3713,
+      "kappa": 0.6246,
+      "n_agree": 764
+    },
+    "glm-5.3-flash vs MiniMax M3": {
       "n": 1000,
       "observed": 0.779,
       "expected": 0.3809,
       "kappa": 0.643,
       "n_agree": 779
     },
-    "glm-5.3-flash vs laguna-s-2.1-free": {
+    "glm-5.3-flash vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.691,
       "expected": 0.3664,
       "kappa": 0.5123,
       "n_agree": 691
     },
-    "minimax-m3-free vs laguna-s-2.1-free": {
+    "glm-5.3-flash vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.767,
+      "expected": 0.3721,
+      "kappa": 0.6289,
+      "n_agree": 767
+    },
+    "MiniMax M3 vs Laguna S-2.1": {
       "n": 1000,
       "observed": 0.691,
       "expected": 0.3694,
       "kappa": 0.51,
+      "n_agree": 691
+    },
+    "MiniMax M3 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.758,
+      "expected": 0.3721,
+      "kappa": 0.6146,
+      "n_agree": 758
+    },
+    "Laguna S-2.1 vs sarvam-105b": {
+      "n": 1000,
+      "observed": 0.691,
+      "expected": 0.3601,
+      "kappa": 0.5171,
       "n_agree": 691
     }
   },

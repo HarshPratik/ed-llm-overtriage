@@ -1,0 +1,91 @@
+Pair_ID,Low_Risk_Disease,High_Risk_Disease,Model_Diagnosis,n
+PAIR-003,Costochondritis,STEMI,Uncertain,18
+PAIR-004,GERD,Aortic dissection,Acute Coronary Syndrome,1
+PAIR-005,Atrial fibrillation,NSTEMI,Uncertain,2
+PAIR-006,GERD,Pulmonary embolism,Spontaneous Pneumothorax,1
+PAIR-007,COPD exacerbation,Pulmonary embolism,Acute asthma exacerbation,5
+PAIR-007,COPD exacerbation,Pulmonary embolism,Uncertain,2
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Pulmonary embolism,5
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Acute exacerbation of COPD,1
+PAIR-008,Asthma exacerbation,Acute decompensated heart failure,Acute exacerbation of COPD with possible pneumonia,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation,7
+PAIR-009,Acute bronchitis,Pneumonia,Uncertain,5
+PAIR-009,Acute bronchitis,Pneumonia,Pulmonary embolism,3
+PAIR-009,Acute bronchitis,Pneumonia,Acute asthma exacerbation with possible respiratory infection,1
+PAIR-009,Acute bronchitis,Pneumonia,Acute exacerbation of COPD with possible infection,1
+PAIR-009,Acute bronchitis,Pneumonia,Asthma exacerbation,1
+PAIR-009,Acute bronchitis,Pneumonia,Asthma exacerbation (likely viral-triggered),1
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation,4
+PAIR-010,COPD exacerbation,Pneumonia,Pulmonary embolism,3
+PAIR-010,COPD exacerbation,Pneumonia,Acute asthma exacerbation with possible respiratory infection,1
+PAIR-010,COPD exacerbation,Pneumonia,Uncertain,1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pulmonary embolism,7
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Uncertain,3
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Pneumonia,2
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Community-acquired pneumonia,1
+PAIR-011,COPD exacerbation,Acute decompensated heart failure,Community-acquired pneumonia with acute hypoxemic respiratory failure,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary embolism,3
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute Exacerbation of COPD,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Acute exacerbation of asthma (likely infection-triggered),1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Pulmonary Embolism,1
+PAIR-012,Community-acquired pneumonia,Acute decompensated heart failure,Uncertain,1
+PAIR-014,Asthma exacerbation,Pulmonary embolism,Uncertain,4
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Acute Coronary Syndrome (Unstable Angina / NSTEMI),1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Community-acquired pneumonia,1
+PAIR-015,Acute decompensated heart failure,Pulmonary embolism,Uncertain,1
+PAIR-016,Supraventricular tachycardia,Ventricular tachycardia,Uncertain,6
+PAIR-017,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,Uncertain,2
+PAIR-018,Migraine,Subarachnoid hemorrhage,Uncertain,2
+PAIR-019,Migraine with aura,Ischemic stroke,Uncertain,9
+PAIR-019,Migraine with aura,Ischemic stroke,Subarachnoid hemorrhage,4
+PAIR-019,Migraine with aura,Ischemic stroke,Intracranial hemorrhage (likely hypertensive intracerebral hemorrhage),1
+PAIR-019,Migraine with aura,Ischemic stroke,Meningitis,1
+PAIR-020,Migraine,Brain tumor,Subarachnoid hemorrhage,17
+PAIR-020,Migraine,Brain tumor,Uncertain,5
+PAIR-020,Migraine,Brain tumor,Herpes simplex virus encephalitis,1
+PAIR-020,Migraine,Brain tumor,Subarachnoid Hemorrhage,1
+PAIR-021,Viral syndrome,Meningitis,Uncertain,8
+PAIR-021,Viral syndrome,Meningitis,Subarachnoid hemorrhage,5
+PAIR-021,Viral syndrome,Meningitis,Migraine,1
+PAIR-022,BPPV,Posterior circulation stroke,Uncertain,6
+PAIR-022,BPPV,Posterior circulation stroke,Vestibular neuritis,4
+PAIR-022,BPPV,Posterior circulation stroke,Transient ischemic attack,1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Uncertain,3
+PAIR-023,Seizure with postictal state,Ischemic stroke,Multiple sclerosis (acute demyelinating episode),1
+PAIR-023,Seizure with postictal state,Ischemic stroke,Subarachnoid hemorrhage,1
+PAIR-024,Multiple sclerosis relapse,Ischemic stroke,Uncertain,3
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute cholecystitis,4
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Uncertain,3
+PAIR-025,Viral gastroenteritis,Small bowel obstruction,Acute mesenteric ischemia,1
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Uncertain,7
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Small bowel obstruction,3
+PAIR-026,Viral gastroenteritis,Acute appendicitis,Acute Pancreatitis,1
+PAIR-027,Constipation,Small bowel obstruction,Uncertain,4
+PAIR-028,Biliary colic,Acute cholangitis,Acute cholecystitis,24
+PAIR-029,Biliary colic,Acute pancreatitis,Acute cholecystitis,23
+PAIR-029,Biliary colic,Acute pancreatitis,Acute appendicitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute cholecystitis,6
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute pancreatitis,3
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute Pancreatitis,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Acute mesenteric ischemia,1
+PAIR-030,Gastritis,Perforated peptic ulcer,Uncertain,1
+PAIR-031,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,Uncertain,2
+PAIR-032,Gastritis,NSTEMI,Acute cholecystitis,4
+PAIR-032,Gastritis,NSTEMI,Acute mesenteric ischemia,3
+PAIR-032,Gastritis,NSTEMI,Acute pancreatitis,3
+PAIR-032,Gastritis,NSTEMI,Acute Pancreatitis,2
+PAIR-032,Gastritis,NSTEMI,Acute biliary pathology (biliary colic / cholecystitis),1
+PAIR-032,Gastritis,NSTEMI,Bowel obstruction (possibly adhesive small-bowel obstruction given prior abdominal surgery),1
+PAIR-033,Nephrolithiasis,Pyelonephritis,Uncertain,1
+PAIR-034,Hemorrhoids,Upper GI bleed,Uncertain,4
+PAIR-035,Vasovagal syncope,Complete heart block,Cardiac arrhythmia secondary to undiagnosed structural heart disease,1
+PAIR-035,Vasovagal syncope,Complete heart block,"Syncope, likely secondary to cardiac arrhythmia or symptomatic anemia",1
+PAIR-035,Vasovagal syncope,Complete heart block,Uncertain,1
+PAIR-036,UTI with delirium,Subdural hematoma,Uncertain,8
+PAIR-036,UTI with delirium,Subdural hematoma,Acute intracranial hemorrhage or stroke,1
+PAIR-036,UTI with delirium,Subdural hematoma,Acute stroke,1
+PAIR-036,UTI with delirium,Subdural hematoma,Acute stroke or intracranial hemorrhage,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Uncertain,15
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Lumbar disc herniation with sciatica,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Psoas (or spinal epidural) abscess,1
+PAIR-040,Musculoskeletal back pain,Spinal epidural abscess,Psoas abscess,1

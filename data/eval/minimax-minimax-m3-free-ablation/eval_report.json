@@ -1,0 +1,17 @@
+{
+  "model": "minimax/minimax-m3-free",
+  "ablation": true,
+  "n_cases": 1000,
+  "n_evaluated": 1000,
+  "n_ok": 1000,
+  "n_failed": 0,
+  "risk_counts": {
+    "High": 874,
+    "Uncertain": 95,
+    "Low": 31
+  },
+  "mean_latency_sec": 16.263,
+  "wrote_csv": "D:\\research_triage\\data\\eval\\minimax-minimax-m3-free-ablation\\evaluated_cases.csv",
+  "uncertain_diagnosis": 127,
+  "named_next_test": 977
+}

@@ -1,6 +1,6 @@
 # Phase 3–4 analysis
 
-Target model: **poolside/laguna-s-2.1-free**. Generator: gpt-5.6-sol. N = 1000 synthetic ED cases.
+Target model: **Laguna S-2.1**. Generator: gpt-5.6-sol. N = 1000 synthetic ED cases.
 
 ## Phase 3 parsing
 

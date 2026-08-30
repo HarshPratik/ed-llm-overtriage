@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cross-model endpoints, pairwise Cohen's kappa, and Fleiss' kappa.
 
-Reads the six forced-JSON eval CSVs. Does not overwrite Terra artifacts.
+Reads the seven forced-JSON eval CSVs. Does not overwrite Terra artifacts.
 """
 
 from __future__ import annotations
@@ -26,8 +26,9 @@ MODELS = [
     ("grok-4.6", ROOT / "data" / "eval" / "grok-4.6" / "evaluated_cases.csv"),
     ("gemini-3.7-flash", ROOT / "data" / "eval" / "gemini-3.7-flash" / "evaluated_cases.csv"),
     ("glm-5.3-flash", ROOT / "data" / "eval" / "glm-5.3-flash" / "evaluated_cases.csv"),
-    ("minimax-m3-free", ROOT / "data" / "eval" / "minimax-minimax-m3-free" / "evaluated_cases.csv"),
-    ("laguna-s-2.1-free", ROOT / "data" / "eval" / "poolside-laguna-s-2.1-free" / "evaluated_cases.csv"),
+    ("MiniMax M3", ROOT / "data" / "eval" / "minimax-minimax-m3-free" / "evaluated_cases.csv"),
+    ("Laguna S-2.1", ROOT / "data" / "eval" / "poolside-laguna-s-2.1-free" / "evaluated_cases.csv"),
+    ("sarvam-105b", ROOT / "data" / "eval" / "sarvam-105b" / "evaluated_cases.csv"),
 ]
 
 
@@ -105,13 +106,13 @@ def endpoints(rows: list[dict]) -> dict:
 
 def plot_endpoints(summary: dict, path: Path) -> None:
     names = list(summary["endpoints"])
-    labels = [name.replace("-free", "") for name in names]
+    labels = list(names)
     self_h = [summary["endpoints"][n]["self_high_pct"] for n in names]
     mapped = [summary["endpoints"][n]["high_among_mapped_pct"] for n in names]
     broad = [summary["endpoints"][n]["broad_high_pct"] for n in names]
     x = np.arange(len(names))
     width = 0.25
-    fig, ax = plt.subplots(figsize=(11.5, 5.4))
+    fig, ax = plt.subplots(figsize=(12.5, 5.4))
     ax.bar(x - width, self_h, width, label="Self-label High", color="#d55e00")
     ax.bar(x, mapped, width, label="High-risk pole among mapped", color="#0072b2")
     ax.bar(x + width, broad, width, label="Broad high (pole or other emergency)", color="#e69f00")
@@ -161,9 +162,9 @@ def main() -> int:
         "n_overlap": len(ids),
         "models": names,
         "endpoints": endpoints_by_model,
-        "all_six_self_high": {"k": n_all_high, "n": len(ids), "pct": round(100 * n_all_high / len(ids), 1)},
+        "all_seven_self_high": {"k": n_all_high, "n": len(ids), "pct": round(100 * n_all_high / len(ids), 1)},
         "not_unanimous_high": {"k": n_any_low, "n": len(ids)},
-        "all_six_high_pole": {"k": unanimous_high_pole, "n": len(ids), "pct": round(100 * unanimous_high_pole / len(ids), 1)},
+        "all_seven_high_pole": {"k": unanimous_high_pole, "n": len(ids), "pct": round(100 * unanimous_high_pole / len(ids), 1)},
         "fleiss_self_high": fleiss_kappa(risk_mat),
         "fleiss_mapped_pole": fleiss_kappa(pole_mat),
         "pairwise_self_risk_kappa": pairwise_risk,
@@ -173,7 +174,7 @@ def main() -> int:
     plot_endpoints(report, fig_path)
     out_json = OUT_DIR / "model_agreement.json"
     out_json.write_text(json.dumps(report, indent=2), encoding="utf-8")
-    print(json.dumps({k: report[k] for k in ("n_overlap", "all_six_self_high", "all_six_high_pole", "fleiss_self_high", "fleiss_mapped_pole", "endpoints")}, indent=2))
+    print(json.dumps({k: report[k] for k in ("n_overlap", "all_seven_self_high", "all_seven_high_pole", "fleiss_self_high", "fleiss_mapped_pole", "endpoints")}, indent=2))
     print("wrote", out_json)
     print("wrote", fig_path)
     return 0

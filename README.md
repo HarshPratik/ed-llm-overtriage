@@ -3,7 +3,7 @@
 This repository measures whether a large language model over-calls dangerous diagnoses when it is given **ambiguous emergency-department (ED) case histories**. Each case is written so that a common, lower-risk disease and a cannot-miss, higher-risk disease remain equally plausible. The model is then asked for a single primary diagnosis.
 
 **Primary model:** `gpt-5.6-terra`
-**Replications:** `grok-4.6`, `gemini-3.7-flash`, `glm-5.3-flash`, `minimax-m3-free`, `laguna-s-2.1-free`
+**Replications:** grok-4.6, gemini-3.7-flash, glm-5.3-flash, MiniMax M3, Laguna S-2.1, sarvam-105b
 **Case generator:** `gpt-5.6-sol`
 **N = 1000** synthetic cases (25 cases × 40 disease pairs)
 
@@ -12,7 +12,7 @@ The short version of the result:
 - Terra labeled **931 / 1000 (93.1%)** of cases **High** risk.
 - When its diagnosis was mapped onto the intended pair, it chose the **high-risk pole in 570 / 1000 (57.0%)** of all cases, and in **570 / 831 (68.6%)** of cases that mapped to either pole.
 - A one-sided binomial test of that 68.6% share against a 50% reference is highly significant (*p* = 1.5 × 10⁻²⁷).
-- The same 1000 cases on five other vendors still self-label High **79.9–89.7%** of the time. Every model prefers the cannot-miss pole among mapped diagnoses (**55.8–65.1%**). **671 / 1000** cases are High for all six models.
+- The same 1000 cases on six other vendors still self-label High **79.9–89.7%** of the time. Every model prefers the cannot-miss pole among mapped diagnoses (**55.8–65.1%**). **653 / 1000** cases are High for all seven models.
 
 The 50% figure is a **reference point**, not a clinical gold standard. The cases were written to stay ambiguous. A human ED baseline has not yet been collected. Cross-model numbers live in `data/analysis/COMPARISON.md`.
 
@@ -99,7 +99,7 @@ The full list is `data/pairs/disease_pairs.csv`.
 
 All 1000 Terra calls returned a parseable answer (985 on the first try; mean latency 15.2 s).
 
-The same 1000 texts were then run on five other models with the same JSON contract: Grok 4.6, Gemini 3.7 Flash, and GLM 5.3 Flash through the Factory API (`scripts/evaluate_factory.py`); MiniMax M3 Free and Laguna S-2.1 Free through a local OpenAI-compatible pool (`scripts/evaluate_pool.py`). Each model writes under `data/eval/<model>/` so Terra files stay intact. All six forced-JSON runs parsed 1000 / 1000.
+The same 1000 texts were then run on other models with the same JSON contract: Grok 4.6, Gemini 3.7 Flash, and GLM 5.3 Flash through the Factory API (`scripts/evaluate_factory.py`); MiniMax M3 and Laguna S-2.1 through a local OpenAI-compatible pool (`scripts/evaluate_pool.py`); sarvam-105b through the Sarvam API (`scripts/evaluate_followups.py`). Each model writes under `data/eval/<model>/` so Terra files stay intact. All forced-JSON runs parsed 1000 / 1000.
 
 ### Phase 3 — Forced JSON diagnosis
 
@@ -278,23 +278,30 @@ Younger patients are slightly less often mapped to the high-risk pole, and sligh
 
 ### 7. Replication, ablation, and sycophancy
 
-![Self-High, mapped high-risk pole, and broad high across six models](data/analysis/figures/cross_model_endpoints.png)
+![Self-High, mapped high-risk pole, and broad high across seven models](data/analysis/figures/cross_model_endpoints.png)
 
 | Model | Self-High | High-risk pole among mapped | Broad high |
 |---|---:|---:|---:|
 | gpt-5.6-terra | **93.1%** | **68.6%** | **73.7%** |
-| minimax-m3-free | 89.7% | 65.1% | 70.8% |
+| MiniMax M3 | 89.7% | 65.1% | 70.8% |
 | grok-4.6 | 87.7% | 58.6% | 62.2% |
-| laguna-s-2.1-free | 86.4% | 63.8% | 68.6% |
+| Laguna S-2.1 | 86.4% | 63.8% | 68.6% |
 | gemini-3.7-flash | 83.2% | 55.8% | 60.1% |
 | glm-5.3-flash | 79.9% | 61.5% | 66.8% |
+| sarvam-105b | 83.9% | 59.4% | 62.7% |
 
-All six prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs 50%). **671 / 1000** cases are High for every model. Fleiss’ κ is 0.44 on High/Low (chance agreement is already high) and **0.60** on mapped pole. Details: `data/analysis/COMPARISON.md`.
+All of them prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs 50%). **653 / 1000** cases are High for every model. Details: `data/analysis/COMPARISON.md`.
 
-On Grok 4.6 only:
+**Prompt ablation** (allow `Uncertain` and a next test) on Grok, Terra, MiniMax M3, and Laguna S-2.1. Hedging the disease name does not reduce defensive risk labeling:
 
-- **Prompt ablation** (allow `Uncertain` and a next test): High rose 87.7% → **94.8%**. 215 / 231 Uncertain diagnoses were still labeled High. Hedging the disease name does not reduce defensive risk labeling.
-- **Sycophancy** (patient downplays: “just heartburn”, “I want to go home”): High → Low on **4 / 877** Turn-1 High cases. High actually rose 890 → 913. The model holds the cannot-miss label when the user argues it is nothing.
+| Model | Original High | Ablation High | Named a next test | High-risk pole among mapped (ablation) |
+|---|---:|---:|---:|---:|
+| grok-4.6 | 87.7% | **94.8%** | 985 | 66.1% |
+| gpt-5.6-terra | 93.1% | **98.8%** | 997 | 75.6% |
+| MiniMax M3 | 89.7% | 87.4% | 977 | 68.0% |
+| Laguna S-2.1 | 86.4% | 87.5% | 981 | 69.5% |
+
+**Sycophancy** (Grok 4.6; patient downplays: “just heartburn”, “I want to go home”): High → Low on **4 / 877** Turn-1 High cases. High actually rose 890 → 913. The model holds the cannot-miss label when the user argues it is nothing.
 
 ---
 
@@ -309,12 +316,12 @@ On Grok 4.6 only:
 
 ## Limitations
 
-- The main prompt *forces* a single diagnosis and a High/Low tag, which may inflate defensive answers. Allowing Uncertain on Grok increased High rather than reducing it.
+- The main prompt *forces* a single diagnosis and a High/Low tag, which may inflate defensive answers. Allowing Uncertain on Grok, Terra, MiniMax M3, and Laguna S-2.1 did not reduce High; on Grok and Terra it increased it.
 - No clinician baseline yet, so this is not “more defensive than doctors.”
 - Mapping uses aliases. Close third diagnoses (acute cholecystitis vs cholangitis) are counted as Other, not as the pair’s high-risk pole.
 - Cases are synthetic. They follow the pair constraints, but they are not real ED charts.
-- Routing is not identical across vendors (OpenAI-compatible pool, Factory API, local pool with flattened messages for Laguna/MiniMax). The JSON contract and the 1000 texts are the same.
-- Ablation and sycophancy were run on Grok 4.6 only.
+- Routing is not identical across vendors (OpenAI-compatible pool, Factory API, local pool with flattened messages for Laguna S-2.1 / MiniMax M3, Sarvam JSON mode). The JSON contract and the 1000 texts are the same.
+- Sycophancy was run on Grok 4.6 only. 33 of 1000 Sarvam cases used `sarvam-105b-conversations` because `sarvam-105b` never emitted JSON.
 
 ---
 
@@ -371,7 +378,8 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 │   ├── generate_case_histories_llm.py
 │   ├── evaluate_cases.py            Terra
 │   ├── evaluate_factory.py          Grok / Gemini / GLM
-│   ├── evaluate_pool.py             MiniMax / Laguna
+│   ├── evaluate_pool.py             MiniMax M3 / Laguna S-2.1
+│   ├── evaluate_followups.py        ablation, sycophancy, Sarvam
 │   ├── analyze_bias.py
 │   ├── summarize_models.py          cross-model figure + kappa
 │   ├── sycophancy_test.py
@@ -411,7 +419,7 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 
 - Collect a clinician baseline on the same cases (or a stratified subset). That is the remaining gap that would let the paper say “more defensive than doctors,” not only “defensive on two-sided stories.”
 - Real ED prevalence is not 50/50. A calibrated comparison against empirical base rates would sit on top of this dataset.
-- Ablation and sycophancy on the other five models, if a reviewer wants protocol-level generality beyond Grok.
+- Sycophancy on models other than Grok 4.6, if a reviewer wants that protocol on every vendor.
 
 ---
 
