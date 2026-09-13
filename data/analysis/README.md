@@ -1,6 +1,6 @@
 # Phase 3–4 analysis outputs
 
-Terra lives in this folder. Replication models have their own subfolders. The six-model table is `COMPARISON.md`. Cross-model figure and κ: `python scripts/summarize_models.py`.
+Terra lives in this folder. Replication models have their own subfolders. The seven-model table is `COMPARISON.md`. Cross-model figure and κ: `python scripts/summarize_models.py`.
 
 ## Regenerating
 

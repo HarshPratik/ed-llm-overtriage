@@ -301,7 +301,15 @@ All of them prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs
 | MiniMax M3 | 89.7% | 87.4% | 977 | 68.0% |
 | Laguna S-2.1 | 86.4% | 87.5% | 981 | 69.5% |
 
-**Sycophancy** (Grok 4.6; patient downplays: “just heartburn”, “I want to go home”): High → Low on **4 / 877** Turn-1 High cases. High actually rose 890 → 913. The model holds the cannot-miss label when the user argues it is nothing.
+**Sycophancy** (patient downplays: “just heartburn”, “I want to go home”). Same 1000 cases, two-turn session. High → Low stays rare:
+
+| Model | Turn 1 High | High → Low | Low → High | Turn 2 High |
+|---|---:|---:|---:|---:|
+| grok-4.6 | 890 | **4 / 890 (0.45%)** | 27 | **913** |
+| gpt-5.6-terra | 959 | **12 / 959 (1.25%)** | 13 | **960** |
+| gemini-3.7-flash | 836 | **24 / 836 (2.87%)** | 13 | 825 |
+
+Grok and Terra hold or raise High after downplay. Gemini downgrades more often (mainly headache → migraine) but still keeps 812 / 836 Turn-1 High labels. Write-ups: `data/analysis/grok-4.6-sycophancy/SYCOPHANCY.md`, `data/analysis/gpt-5.6-terra-sycophancy/SYCOPHANCY.md`, `data/analysis/gemini-3.7-flash-sycophancy/SYCOPHANCY.md`.
 
 ---
 
@@ -321,7 +329,7 @@ All of them prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs
 - Mapping uses aliases. Close third diagnoses (acute cholecystitis vs cholangitis) are counted as Other, not as the pair’s high-risk pole.
 - Cases are synthetic. They follow the pair constraints, but they are not real ED charts.
 - The JSON contract and the 1000 texts are the same for every model.
-- Sycophancy was run on Grok 4.6 only. 33 of 1000 sarvam-105b cases used the conversations variant because the default run never emitted JSON.
+- Sycophancy was run on Grok 4.6, gpt-5.6-terra, and gemini-3.7-flash, not on MiniMax, Laguna, GLM, or sarvam-105b. 33 of 1000 sarvam-105b cases used the conversations variant because the default run never emitted JSON.
 
 ---
 
@@ -381,6 +389,7 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 │   ├── analyze_bias.py
 │   ├── summarize_models.py          cross-model figure + kappa
 │   ├── sycophancy_test.py
+│   ├── sycophancy_droid4_guard.py   pause/resume if Factory falls back
 │   ├── review_other.py
 │   ├── generate_case_histories.py   template generator (backup)
 │   ├── repair_fallback_cases.py
@@ -417,7 +426,7 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 
 - Collect a clinician baseline on the same cases (or a stratified subset). That is the remaining gap that would let the paper say “more defensive than doctors,” not only “defensive on two-sided stories.”
 - Real ED prevalence is not 50/50. A calibrated comparison against empirical base rates would sit on top of this dataset.
-- Sycophancy on models other than Grok 4.6, if a reviewer wants that protocol on every model.
+- Sycophancy on MiniMax, Laguna, GLM, or sarvam-105b, if a reviewer wants that protocol on every model.
 
 ---
 

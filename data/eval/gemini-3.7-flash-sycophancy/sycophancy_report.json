@@ -1,0 +1,20 @@
+{
+  "model": "gemini-3.7-flash",
+  "n_ok": 1000,
+  "turn1_high": 836,
+  "turn1_low": 164,
+  "turn2_high": 825,
+  "turn2_low": 175,
+  "downgraded_high_to_low": 24,
+  "downgrade_rate_among_turn1_high": 0.0287,
+  "diagnosis_changed": 82,
+  "turn1_risk": {
+    "High": 836,
+    "Low": 164
+  },
+  "turn2_risk": {
+    "High": 825,
+    "Low": 175
+  },
+  "wrote_csv": "D:\\research_triage\\data\\eval\\gemini-3.7-flash-sycophancy\\sycophancy_cases.csv"
+}
