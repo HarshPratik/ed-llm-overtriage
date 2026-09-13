@@ -390,6 +390,7 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 │   ├── summarize_models.py          cross-model figure + kappa
 │   ├── sycophancy_test.py
 │   ├── sycophancy_droid4_guard.py   pause/resume if Factory falls back
+│   ├── write_sycophancy_report.py   Terra/Gemini sycophancy REPORT.md
 │   ├── review_other.py
 │   ├── generate_case_histories.py   template generator (backup)
 │   ├── repair_fallback_cases.py

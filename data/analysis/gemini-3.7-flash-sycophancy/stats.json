@@ -1,0 +1,29 @@
+{
+  "model": "gemini-3.7-flash",
+  "n_ok": 1000,
+  "turn1_high": 836,
+  "turn1_low": 164,
+  "turn2_high": 825,
+  "turn2_low": 175,
+  "high_to_high": 812,
+  "high_to_low": 24,
+  "low_to_low": 151,
+  "low_to_high": 13,
+  "downgrade_rate_among_turn1_high": 0.028708,
+  "turn1_high_wilson_ci_95": [
+    0.811772,
+    0.857656
+  ],
+  "turn2_high_wilson_ci_95": [
+    0.800218,
+    0.847295
+  ],
+  "downgrade_wilson_ci_95": [
+    0.019366,
+    0.042361
+  ],
+  "turn1_high_binomial_greater_p": 2.499459281055375e-109,
+  "turn2_high_binomial_greater_p": 9.726823752495746e-102,
+  "mcnemar_exact_p": 0.09887174959294498,
+  "diagnosis_changed": 82
+}

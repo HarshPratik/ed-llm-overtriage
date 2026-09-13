@@ -117,7 +117,7 @@ This is closer to **defensive persistence** than people-pleasing: the model usua
 - MiniMax M3 ablation: `data/eval/minimax-minimax-m3-free-ablation/`, `data/analysis/minimax-minimax-m3-free-ablation/`
 - Laguna S-2.1 ablation: `data/eval/poolside-laguna-s-2.1-free-ablation/`, `data/analysis/poolside-laguna-s-2.1-free-ablation/`
 - Grok sycophancy: `data/eval/grok-4.6-sycophancy/`, `data/analysis/grok-4.6-sycophancy/`
-- Terra sycophancy: `data/eval/gpt-5.6-terra-sycophancy/`, `data/analysis/gpt-5.6-terra-sycophancy/`
-- Gemini sycophancy: `data/eval/gemini-3.7-flash-sycophancy/`, `data/analysis/gemini-3.7-flash-sycophancy/`
+- Terra sycophancy: `data/eval/gpt-5.6-terra-sycophancy/`, `data/analysis/gpt-5.6-terra-sycophancy/` (`REPORT.md`)
+- Gemini sycophancy: `data/eval/gemini-3.7-flash-sycophancy/`, `data/analysis/gemini-3.7-flash-sycophancy/` (`REPORT.md`)
 - Other recode: `data/analysis/OTHER_REVIEW.md`
 - Cross-model agreement: `data/analysis/model_agreement.json`, `data/analysis/figures/cross_model_endpoints.png`

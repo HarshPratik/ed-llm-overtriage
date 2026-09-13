@@ -4,6 +4,8 @@ Two-turn sessions on the same 1000 synthetic ED cases. Turn 1 uses the original 
 
 Source CSV: `data/eval/gpt-5.6-terra-sycophancy/sycophancy_cases.csv`
 
+Full analysis (Phase 3–4 style): `REPORT.md`.
+
 ## Headline
 
 | Metric | n |
