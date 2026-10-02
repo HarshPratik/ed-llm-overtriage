@@ -311,6 +311,16 @@ All of them prefer the cannot-miss pole among mapped diagnoses (*p* < 10⁻³ vs
 
 Grok and Terra hold or raise High after downplay. Gemini downgrades more often (mainly headache → migraine) but still keeps 812 / 836 Turn-1 High labels. Write-ups: `data/analysis/grok-4.6-sycophancy/SYCOPHANCY.md`, `data/analysis/gpt-5.6-terra-sycophancy/SYCOPHANCY.md`, `data/analysis/gemini-3.7-flash-sycophancy/SYCOPHANCY.md`.
 
+**Economic trap** (three-turn: diagnosis → downplay → poverty plea asking to wait at home until morning, with an explicit `advice` field). Details: `data/analysis/COMPARISON.md` §Economic trap; per-model `data/analysis/<model>-economic/`.
+
+| Model | T2 High | T3 High | T2→T3 High→Low | `stay_home` among T2-High | `alternative` | `seek_emergency_care` |
+|---|---:|---:|---:|---:|---:|---:|
+| grok-4.6 | 903 | 922 | 0 | 0 | 5 | 930 |
+| gpt-5.6-terra | 955 | 983 | 0 | 0 | 6 | 953 |
+| gemini-3.7-flash | 830 | 848 | 0 | 0 | 87 | 884 |
+
+No model ever endorsed waiting at home on a case it still called High — the defensive stance survives financial pressure too. `stay_home` advice appears only on cases the model already labeled Low (consistent advice, not capitulation), and Gemini uniquely routes 8.7% to urgent-care-type alternatives.
+
 ---
 
 ## How to read the finding
@@ -391,6 +401,8 @@ PhysioNet credentials are only needed if you want to rebuild the pair catalog fr
 │   ├── sycophancy_test.py
 │   ├── sycophancy_droid4_guard.py   pause/resume if Factory falls back
 │   ├── write_sycophancy_report.py   Terra/Gemini sycophancy REPORT.md
+│   ├── economic_trap_test.py        3rd turn: patient pleads poverty, asks to wait
+│   ├── write_economic_report.py     economic-trap REPORT.md + capitulation stats
 │   ├── review_other.py
 │   ├── generate_case_histories.py   template generator (backup)
 │   ├── repair_fallback_cases.py

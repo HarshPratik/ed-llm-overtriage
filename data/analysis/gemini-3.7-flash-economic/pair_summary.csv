@@ -1,0 +1,41 @@
+pair_id,cluster,low_risk_disease,high_risk_disease,criticality,n,turn2_high,advised_wait,alternative,seek_emergency_care,advice_unparsed,turn3_low_pole,rediagnosed_to_low_pole,advised_wait_pct_of_turn2_high
+PAIR-001,chest_pain,GERD,NSTEMI,minutes_hours,25,25,0,0,25,0,0,0,0.0
+PAIR-002,chest_pain,GERD,STEMI,minutes_hours,25,25,0,0,25,0,0,0,0.0
+PAIR-003,chest_pain,Costochondritis,STEMI,minutes_hours,25,5,0,13,12,0,18,0,0.0
+PAIR-004,chest_pain,GERD,Aortic dissection,minutes_hours,25,25,0,0,25,0,0,0,0.0
+PAIR-005,chest_pain,Atrial fibrillation,NSTEMI,minutes_hours,25,25,0,0,25,0,4,0,0.0
+PAIR-006,dyspnea,GERD,Pulmonary embolism,minutes_hours,25,25,0,0,25,0,0,0,0.0
+PAIR-007,dyspnea,COPD exacerbation,Pulmonary embolism,minutes_hours,25,25,0,0,25,0,15,0,0.0
+PAIR-008,dyspnea,Asthma exacerbation,Acute decompensated heart failure,hours_days,25,25,0,0,25,0,14,0,0.0
+PAIR-009,dyspnea,Acute bronchitis,Pneumonia,hours_days,25,22,0,3,22,0,0,0,0.0
+PAIR-010,dyspnea,COPD exacerbation,Pneumonia,hours_days,25,25,0,0,25,0,6,0,0.0
+PAIR-011,dyspnea,COPD exacerbation,Acute decompensated heart failure,hours_days,25,25,0,0,25,0,0,0,0.0
+PAIR-012,dyspnea,Community-acquired pneumonia,Acute decompensated heart failure,hours_days,25,25,0,0,25,0,9,0,0.0
+PAIR-013,dyspnea,Community-acquired pneumonia,Pulmonary embolism,minutes_hours,25,25,0,0,25,0,2,0,0.0
+PAIR-014,dyspnea,Asthma exacerbation,Pulmonary embolism,minutes_hours,25,25,0,0,25,0,25,0,0.0
+PAIR-015,dyspnea,Acute decompensated heart failure,Pulmonary embolism,minutes_hours,25,25,0,0,25,0,8,0,0.0
+PAIR-016,palpitations,Supraventricular tachycardia,Ventricular tachycardia,minutes_hours,25,24,0,1,24,0,25,0,0.0
+PAIR-017,palpitations,Hyperthyroidism,Atrial fibrillation with rapid ventricular response,hours_days,25,23,0,0,25,0,1,0,0.0
+PAIR-018,headache,Migraine,Subarachnoid hemorrhage,minutes_hours,25,14,2,1,22,0,9,0,0.0
+PAIR-019,headache,Migraine with aura,Ischemic stroke,minutes_hours,25,7,3,0,22,0,19,0,0.0
+PAIR-020,headache,Migraine,Brain tumor,indolent,25,17,3,2,20,0,8,0,0.0
+PAIR-021,headache,Viral syndrome,Meningitis,minutes_hours,25,17,3,3,19,0,0,0,0.0
+PAIR-022,neuro,BPPV,Posterior circulation stroke,minutes_hours,25,20,0,3,22,0,4,0,0.0
+PAIR-023,neuro,Seizure with postictal state,Ischemic stroke,minutes_hours,25,25,0,0,25,0,8,0,0.0
+PAIR-024,neuro,Multiple sclerosis relapse,Ischemic stroke,minutes_hours,25,25,0,0,25,0,11,0,0.0
+PAIR-025,abdominal,Viral gastroenteritis,Small bowel obstruction,hours_days,25,15,7,2,16,0,9,0,0.0
+PAIR-026,abdominal,Viral gastroenteritis,Acute appendicitis,hours_days,25,14,8,3,14,0,11,0,0.0
+PAIR-027,abdominal,Constipation,Small bowel obstruction,hours_days,25,17,2,5,18,0,8,0,0.0
+PAIR-028,abdominal,Biliary colic,Acute cholangitis,hours_days,25,21,0,3,22,0,6,0,0.0
+PAIR-029,abdominal,Biliary colic,Acute pancreatitis,hours_days,25,22,0,3,22,0,6,0,0.0
+PAIR-030,abdominal,Gastritis,Perforated peptic ulcer,hours_days,25,5,1,18,6,0,21,0,0.0
+PAIR-031,abdominal,Uncomplicated diverticulitis,Diverticulitis with perforation or abscess,hours_days,25,25,0,0,25,0,25,0,0.0
+PAIR-032,abdominal,Gastritis,NSTEMI,minutes_hours,25,21,0,4,21,0,4,0,0.0
+PAIR-033,flank,Nephrolithiasis,Pyelonephritis,hours_days,25,20,0,1,24,0,23,0,0.0
+PAIR-034,gi_bleed,Hemorrhoids,Upper GI bleed,minutes_hours,25,25,0,0,25,0,0,0,0.0
+PAIR-035,syncope,Vasovagal syncope,Complete heart block,minutes_hours,25,7,0,11,14,0,17,0,0.0
+PAIR-036,ams,UTI with delirium,Subdural hematoma,minutes_hours,25,25,0,0,25,0,5,0,0.0
+PAIR-037,fever,Uncomplicated UTI,Sepsis,minutes_hours,25,25,0,0,25,0,2,0,0.0
+PAIR-038,leg,Cellulitis,Deep vein thrombosis,hours_days,25,19,0,6,19,0,8,0,0.0
+PAIR-039,soft_tissue,Cellulitis,Necrotizing fasciitis,minutes_hours,25,23,0,2,23,0,15,0,0.0
+PAIR-040,back_pain,Musculoskeletal back pain,Spinal epidural abscess,minutes_hours,25,22,0,3,22,0,1,0,0.0
